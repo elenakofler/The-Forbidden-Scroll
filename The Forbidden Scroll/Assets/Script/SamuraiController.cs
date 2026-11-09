@@ -22,6 +22,7 @@ public class SamuraiController : MonoBehaviour
     public Transform attackPoint;
     public float attackRange = 1.5f;
     public LayerMask enemyLayer;
+    public int attackDamage = 4;       // Schaden pro Schlag
 
     //a bool tell tells us if the Scroll has been pickt up, in this case it is fals because it hasn't been pickt up yet
     [Header("win condition")]
@@ -128,13 +129,18 @@ public class SamuraiController : MonoBehaviour
     //used for the attack
     void Attack()
     {
-        Debug.Log("Samurai is attacking");
-        if (attackPoint != null)
+        // Suche alle Objekte im Umkreis der Reichweite
+        Collider[] hitObjects = Physics.OverlapSphere(transform.position, attackRange);
+
+        foreach (Collider col in hitObjects)
         {
-            Collider[] hitEnemies = Physics.OverlapSphere(attackPoint.position, attackRange, enemyLayer);
-            foreach (Collider enemy in hitEnemies)
+            // Prüft, ob das Objekt das "GuardHealth"-Skript hat
+            GuardHealth guard = col.GetComponent<GuardHealth>();
+            if (guard != null && !guard.IsDead())
             {
-                Debug.Log("Enemy was hit " + enemy.name);
+                guard.TakeDamage(attackDamage);
+                Debug.Log("Spieler hat die Wache getroffen!");
+                break; // Beende die Schleife nach dem ersten Treffer
             }
         }
     }
