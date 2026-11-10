@@ -100,6 +100,12 @@ public class MenuManager : MonoBehaviour
         SceneManager.LoadScene(0);
     }
 
+    public void SamuraiScene()
+    {
+        Time.timeScale = 1f;
+        SceneManager.LoadScene(2);
+    }
+
     public void LoadVictoryScene()
     {
         Time.timeScale = 1f; // Zeit zurücksetzen
