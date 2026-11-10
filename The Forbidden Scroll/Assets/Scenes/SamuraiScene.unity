@@ -485404,6 +485404,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Guard_outside_right
       objectReference: {fileID: 0}
+    - target: {fileID: 1090749765376429682, guid: daecdb38485f9f74d9de8e455d2de967, type: 3}
+      propertyPath: m_TagString
+      value: Enemy
+      objectReference: {fileID: 0}
     - target: {fileID: 6265245368946898515, guid: daecdb38485f9f74d9de8e455d2de967, type: 3}
       propertyPath: m_Graph
       value: 

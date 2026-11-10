@@ -31,6 +31,13 @@ public class GuardHealth : MonoBehaviour
         isDead = true;
         Debug.Log("Wache wurde besiegt!");
 
+        // --- HIER WIRD DER MENUMANAGER INFORMIERT ---
+        MenuManager menuManager = Object.FindAnyObjectByType<MenuManager>();
+        if (menuManager != null)
+        {
+            menuManager.EnemyDefeat();
+        }
+
         // 1. NavMeshAgent ausschalten, damit sie aufhört sich zu bewegen
         NavMeshAgent agent = GetComponent<NavMeshAgent>();
         if (agent != null) agent.enabled = false;

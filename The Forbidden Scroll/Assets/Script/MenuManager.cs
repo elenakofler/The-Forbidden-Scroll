@@ -4,11 +4,14 @@ using UnityEngine.InputSystem; // Wichtig für das neue Input System
 
 public class MenuManager : MonoBehaviour
 {
+
     [Header("Menü Panels")]
     public GameObject startMenuPanel;
     public GameObject pauseMenuPanel;
 
     private bool isPaused = false;
+
+    private int remainingEnemies;
 
     void Start()
     {
@@ -23,6 +26,9 @@ public class MenuManager : MonoBehaviour
         {
             pauseMenuPanel.SetActive(false);
         }
+
+        //Count the Enemies at the start
+        remainingEnemies =GameObject.FindGameObjectsWithTag("Enemy").Length;
     }
 
     void Update()
@@ -42,6 +48,24 @@ public class MenuManager : MonoBehaviour
                 }
             }
         }
+
+    }
+
+    public void EnemyDefeat()
+    {
+        remainingEnemies--; //reduces the Enemy count every time an enemy dies.
+
+        //when there are no Enemies left the next scene is suppost to be called
+        if(remainingEnemies <= 0)
+        {
+            Invoke("LoadNinjaScene", 1.5f);
+        }
+    }
+
+    void LoadNinjaScene()
+    {
+        Time.timeScale = 1f; //reset the time to the normal scale
+        SceneManager.LoadScene("NinjaScene");
     }
 
     public void RestartGame()
