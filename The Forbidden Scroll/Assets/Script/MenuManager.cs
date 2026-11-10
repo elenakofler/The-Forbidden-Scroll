@@ -100,6 +100,12 @@ public class MenuManager : MonoBehaviour
         SceneManager.LoadScene(0);
     }
 
+    public void LoadVictoryScene()
+    {
+        Time.timeScale = 1f; // Zeit zurücksetzen
+        SceneManager.LoadScene(4); // Lädt die Victory-Szene
+    }
+
     public void QuitGame()
     {
         Application.Quit();

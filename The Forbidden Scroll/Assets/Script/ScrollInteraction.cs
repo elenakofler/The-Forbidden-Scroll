@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 public class ScrollInteraction : MonoBehaviour
 {
@@ -33,8 +34,19 @@ public class ScrollInteraction : MonoBehaviour
                 // Calls the method in NinjaController to get the scroll
                 playerTransform.GetComponent<NinjaController>().CollectScroll();
                 
+                MenuManager menuManager = Object.FindAnyObjectByType<MenuManager>();
+                if (menuManager != null)
+                {
+                    menuManager.LoadVictoryScene();
+                }
+                else
+                {
+                    // Fallback, falls kein MenuManager da ist
+                    SceneManager.LoadScene(4);
+                }
                 // deletes the scroll from the game world
                 Destroy(gameObject);
+
             }
         }
     }
