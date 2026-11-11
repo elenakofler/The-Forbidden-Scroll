@@ -129,8 +129,8 @@ public class SamuraiController : MonoBehaviour
 
         foreach (Collider col in hitObjects)
         {
-            // Prüft, ob das Objekt das "GuardHealth"-Skript hat
-            GuardHealth guard = col.GetComponent<GuardHealth>();
+            // Prüft, ob das Objekt das "EnemyHealth"-Skript hat
+            EnemyHealth guard = col.GetComponent<EnemyHealth>();
             if (guard != null && !guard.IsDead())
             {
                 guard.TakeDamage(attackDamage);

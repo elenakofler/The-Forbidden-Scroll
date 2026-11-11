@@ -4,7 +4,7 @@ using Unity.Behavior;
 
 public class GuardHealth : MonoBehaviour
 {
-    public int maxHealth = 50;
+    public int maxHealth = 10;
     private int currentHealth;
     private bool isDead = false;
 
