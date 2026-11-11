@@ -54,14 +54,9 @@ public class SamuraiController : MonoBehaviour
 
         if(isGameOver)
         {
-            if(Keyboard.current != null && Keyboard.current.rKey.wasPressedThisFrame)
-            {
-                SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-            }
-
             return;
-
         }
+
         if (Keyboard.current != null && Keyboard.current.hKey.wasPressedThisFrame)
         {
             TakeDamage(10);
@@ -169,6 +164,7 @@ public class SamuraiController : MonoBehaviour
         //Physikbewegung stoppen
         rb.linearVelocity = Vector3.zero;
         rb.angularVelocity = Vector3.zero;
+        SceneManager.LoadScene("GameOverScene");
     }
 
     //to collect the scroll 
