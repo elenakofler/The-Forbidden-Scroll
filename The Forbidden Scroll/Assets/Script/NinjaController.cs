@@ -11,6 +11,7 @@ public class NinjaController : MonoBehaviour
     public float jumpForce = 5f;
     private bool isCrouching = false;
     public float rotationSpeed = 15f;
+    private bool isGrounded = true;
 
     //variables for attack and health
     [Header("attack and health")]
@@ -93,11 +94,13 @@ public class NinjaController : MonoBehaviour
             }
         }
 
-        //you can only jump when you are not crouched 
-        if (Keyboard.current.spaceKey.wasPressedThisFrame && !isCrouching)
+        //you can only jump when you are not crouched and when you are on the ground
+        if (Keyboard.current.spaceKey.wasPressedThisFrame && !isCrouching && isGrounded)
         {
             rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
+            isGrounded = false; //after jumping it is automatically set to false so the player cant jump again once they are in the air
         }
+
 
         // attack with the left mouse button
         if (Mouse.current != null && Mouse.current.leftButton.wasPressedThisFrame)
@@ -124,9 +127,29 @@ public class NinjaController : MonoBehaviour
             {
                 capsuleCollider.height = 2.0f;
                 capsuleCollider.center = new Vector3(0, 0, 0);
-                Debug.Log("NNinja is standing up.");
+                Debug.Log("Ninja is standing up.");
             }
         }
+    }
+
+    //for checking if the player is standing on the floor
+    void OnCollisionStay(Collision collision)
+    {
+        foreach (ContactPoint contact in collision.contacts)
+        {
+            //checks if the player is standing on the ground, stopps the player from jumping up the walls 
+            if (contact.normal.y > 0.5f)
+            {
+                isGrounded = true;
+                return;
+            }
+        }
+    }
+
+    //once the player is in the air the bool is set to false
+    void OnCollisionExit(Collision collision)
+    {
+        isGrounded = false;
     }
 
     //used for the attack
