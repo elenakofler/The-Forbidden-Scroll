@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c02bb70996b49eba31d0c206e28da24, type: 3}
   m_Name: GuardInside Blackboard
   m_EditorClassIdentifier: Unity.Behavior::Unity.Behavior.RuntimeBlackboardAsset
-  VersionTimestamp: 639301712600300280
+  VersionTimestamp: 639301960154063770
   AssetID:
-    m_Value0: 0
-    m_Value1: 0
+    m_Value0: 7250167486327187039
+    m_Value1: 5023129367396394010
   m_Blackboard:
     m_Variables:
     - rid: 2275768372998963272
@@ -49,8 +49,8 @@ MonoBehaviour:
           m_Value1: 13806596646586389485
         Name: Waypoints
         m_Value:
-        - {fileID: 7367867181921685029, guid: b97a62a3415271b4fafc7580a6edb152, type: 3}
-        - {fileID: 477268525398176380, guid: 5d4f4c336683f2647a18e79783aef530, type: 3}
+        - {fileID: 0}
+        - {fileID: 0}
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -68,7 +68,7 @@ MonoBehaviour:
   m_Nodes:
   - rid: 2275768372998963273
   - rid: 2275768372998963337
-  m_VersionTimestamp: 639301712667021157
+  m_VersionTimestamp: 639301960155429190
   m_SerializedVersion: 3
   m_DebugInfo: {fileID: 1999803681504120660}
   m_RuntimeGraph: {fileID: 8014858786384176814}
@@ -97,7 +97,13 @@ MonoBehaviour:
     RuntimeTypeID:
       m_Value0: 0
       m_Value1: 0
-    Variables: []
+    Variables:
+    - Name: waypointsVariable
+      Type:
+        m_SerializableType: System.Collections.Generic.List`1[[UnityEngine.GameObject,
+          UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]],
+          mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+      Tooltip: 
     NamedChildren: []
     IsPlaceholder: 0
   m_Blackboards: []
@@ -113,6 +119,8 @@ MonoBehaviour:
   references:
     version: 2
     RefIds:
+    - rid: -2
+      type: {class: , ns: , asm: }
     - rid: 2275768372998963273
       type: {class: StartNodeModel, ns: Unity.Behavior, asm: Unity.Behavior.Authoring}
       data:
@@ -159,7 +167,8 @@ MonoBehaviour:
         NodeTypeID:
           m_Value0: 0
           m_Value1: 0
-        m_FieldValues: []
+        m_FieldValues:
+        - rid: 2275768378739130476
     - rid: 2275768372998963338
       type: {class: PortModel, ns: Unity.Behavior.GraphFramework, asm: Unity.Behavior.GraphFramework}
       data:
@@ -179,6 +188,26 @@ MonoBehaviour:
         m_NodeModel:
           rid: 2275768372998963337
         m_Connections: []
+    - rid: 2275768378739130476
+      type: {class: BehaviorGraphNodeModel/FieldModel, ns: Unity.Behavior, asm: Unity.Behavior.Authoring}
+      data:
+        FieldName: waypointsVariable
+        Type:
+          m_SerializableType: System.Collections.Generic.List`1[[UnityEngine.GameObject,
+            UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]],
+            mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+        LocalValue:
+          rid: 2275768378739130477
+        LinkedVariable:
+          rid: -2
+    - rid: 2275768378739130477
+      type: {class: 'BlackboardVariable`1[[System.Collections.Generic.List`1[[UnityEngine.GameObject, UnityEngine.CoreModule]], mscorlib]]', ns: Unity.Behavior, asm: Unity.Behavior}
+      data:
+        GUID:
+          m_Value0: 0
+          m_Value1: 0
+        Name: 
+        m_Value: []
 --- !u!114 &1999803681504120660
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -224,8 +253,8 @@ MonoBehaviour:
           rid: 2275768372998963276
         BlackboardGroupReferences: []
         Root:
-          rid: 2275768372998963340
-        m_VersionTimestamp: 639301712667021157
+          rid: 2275768378739130522
+        m_VersionTimestamp: 639301960155429190
     - rid: 2275768372998963276
       type: {class: BlackboardReference, ns: Unity.Behavior, asm: Unity.Behavior}
       data:
@@ -236,36 +265,18 @@ MonoBehaviour:
       type: {class: Blackboard, ns: Unity.Behavior, asm: Unity.Behavior}
       data:
         m_Variables:
-        - rid: 2275768372998963334
-        - rid: 2275768372998963335
-        - rid: 2275768372998963336
-    - rid: 2275768372998963334
-      type: {class: 'BlackboardVariable`1[[UnityEngine.GameObject, UnityEngine.CoreModule]]', ns: Unity.Behavior, asm: Unity.Behavior}
-      data:
-        GUID:
-          m_Value0: 1
-          m_Value1: 0
-        Name: Self
-        m_Value: {fileID: 0}
-    - rid: 2275768372998963335
-      type: {class: 'BlackboardVariable`1[[UnityEngine.GameObject, UnityEngine.CoreModule]]', ns: Unity.Behavior, asm: Unity.Behavior}
-      data:
-        GUID:
-          m_Value0: 7891520172658379570
-          m_Value1: 17382770508162482377
-        Name: Player
-        m_Value: {fileID: 1662158486570866757, guid: bed77a1e1065beb4b8727e820b018da1, type: 3}
-    - rid: 2275768372998963336
+        - rid: 2275768378739130524
+        - rid: 2275768378739130525
+        - rid: 2275768378739130526
+    - rid: 2275768378739130521
       type: {class: 'BlackboardVariable`1[[System.Collections.Generic.List`1[[UnityEngine.GameObject, UnityEngine.CoreModule]], mscorlib]]', ns: Unity.Behavior, asm: Unity.Behavior}
       data:
         GUID:
-          m_Value0: 12538452929572930933
-          m_Value1: 13806596646586389485
-        Name: Waypoints
-        m_Value:
-        - {fileID: 7367867181921685029, guid: b97a62a3415271b4fafc7580a6edb152, type: 3}
-        - {fileID: 477268525398176380, guid: 5d4f4c336683f2647a18e79783aef530, type: 3}
-    - rid: 2275768372998963340
+          m_Value0: 0
+          m_Value1: 0
+        Name: 
+        m_Value: []
+    - rid: 2275768378739130522
       type: {class: Start, ns: Unity.Behavior, asm: Unity.Behavior}
       data:
         ID:
@@ -276,10 +287,10 @@ MonoBehaviour:
         m_Parent:
           rid: -2
         m_Child:
-          rid: 2275768372998963341
+          rid: 2275768378739130523
         Repeat: 1
         AllowMultipleRepeatsPerTick: 0
-    - rid: 2275768372998963341
+    - rid: 2275768378739130523
       type: {class: GuardVisionAndAttackAction, ns: , asm: Assembly-CSharp}
       data:
         ID:
@@ -288,14 +299,42 @@ MonoBehaviour:
         Graph:
           rid: 2275768372998963275
         m_Parent:
-          rid: 2275768372998963340
+          rid: 2275768378739130522
         movementSpeed: 3.5
         reachThreshold: 1.5
+        waypointsVariable:
+          rid: 2275768378739130521
         viewDistance: 12
         viewAngle: 90
         attackRange: 2
         damage: 10
         attackCooldown: 1.5
+    - rid: 2275768378739130524
+      type: {class: 'BlackboardVariable`1[[UnityEngine.GameObject, UnityEngine.CoreModule]]', ns: Unity.Behavior, asm: Unity.Behavior}
+      data:
+        GUID:
+          m_Value0: 1
+          m_Value1: 0
+        Name: Self
+        m_Value: {fileID: 0}
+    - rid: 2275768378739130525
+      type: {class: 'BlackboardVariable`1[[UnityEngine.GameObject, UnityEngine.CoreModule]]', ns: Unity.Behavior, asm: Unity.Behavior}
+      data:
+        GUID:
+          m_Value0: 7891520172658379570
+          m_Value1: 17382770508162482377
+        Name: Player
+        m_Value: {fileID: 1662158486570866757, guid: bed77a1e1065beb4b8727e820b018da1, type: 3}
+    - rid: 2275768378739130526
+      type: {class: 'BlackboardVariable`1[[System.Collections.Generic.List`1[[UnityEngine.GameObject, UnityEngine.CoreModule]], mscorlib]]', ns: Unity.Behavior, asm: Unity.Behavior}
+      data:
+        GUID:
+          m_Value0: 12538452929572930933
+          m_Value1: 13806596646586389485
+        Name: Waypoints
+        m_Value:
+        - {fileID: 0}
+        - {fileID: 0}
 --- !u!114 &8850737505222371325
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -309,13 +348,13 @@ MonoBehaviour:
   m_Name: GuardInside Blackboard
   m_EditorClassIdentifier: Unity.Behavior.Authoring::Unity.Behavior.BehaviorBlackboardAuthoringAsset
   AssetID:
-    m_Value0: 0
-    m_Value1: 0
+    m_Value0: 7250167486327187039
+    m_Value1: 5023129367396394010
   m_Variables:
   - rid: 2275768372998963280
   - rid: 2275768372998963286
   - rid: 2275768372998963296
-  m_VersionTimestamp: 639301712600300280
+  m_VersionTimestamp: 639301960154063770
   m_CommandBuffer:
     m_Commands: []
   m_RuntimeBlackboardAsset: {fileID: -9126368898573694676}
@@ -352,5 +391,5 @@ MonoBehaviour:
         IsExposed: 1
         m_IsShared: 0
         m_Value:
-        - {fileID: 7367867181921685029, guid: b97a62a3415271b4fafc7580a6edb152, type: 3}
-        - {fileID: 477268525398176380, guid: 5d4f4c336683f2647a18e79783aef530, type: 3}
+        - {fileID: 0}
+        - {fileID: 0}

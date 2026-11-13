@@ -10,12 +10,16 @@ public class GuardVisionAndAttackAction : Unity.Behavior.Action
     private Transform player;
     private NinjaController playerHealth;
     
-    private Transform[] cachedWaypoints;
+    private List<Transform> cachedWaypoints = new List<Transform>();
     private int currentWaypointIndex = 0;
 
     public float movementSpeed = 3.5f;
     public float reachThreshold = 1.5f; 
-    
+
+    // Variable für das Blackboard-Array (Waypoints)
+    [SerializeReference]
+    public BlackboardVariable<List<GameObject>> Waypoints;
+
     public float viewDistance = 12.0f; 
     public float viewAngle = 90.0f;    
     public float attackRange = 2.0f;     
@@ -28,7 +32,14 @@ public class GuardVisionAndAttackAction : Unity.Behavior.Action
 
     protected override Status OnStart()
     {
-        agent = Object.FindAnyObjectByType<NavMeshAgent>();
+        if (GameObject != null)
+        {
+            agent = GameObject.GetComponent<NavMeshAgent>();
+        }
+        if (agent == null)
+        {
+            agent = Object.FindAnyObjectByType<NavMeshAgent>();
+        }
 
         GameObject playerObj = GameObject.FindGameObjectWithTag("Player");
         if (playerObj != null)
@@ -39,18 +50,19 @@ public class GuardVisionAndAttackAction : Unity.Behavior.Action
 
         if (agent == null) return Status.Failure;
 
-        // Waypoints in der Szene suchen
-        List<Transform> foundWaypoints = new List<Transform>();
-        GameObject pointA = GameObject.Find("PointA");
-        GameObject pointB = GameObject.Find("PointB");
-        
-        if (pointA != null) foundWaypoints.Add(pointA.transform);
-        if (pointB != null) foundWaypoints.Add(pointB.transform);
-        cachedWaypoints = foundWaypoints.ToArray();
+        // Wegpunkte aus dem Blackboard auslesen
+        cachedWaypoints.Clear();
+        if (Waypoints != null && Waypoints.Value != null)
+        {
+            foreach (GameObject obj in Waypoints.Value)
+            {
+                if (obj != null) cachedWaypoints.Add(obj.transform);
+            }
+        }
 
         agent.speed = movementSpeed;
         
-        if (cachedWaypoints.Length > 0 && cachedWaypoints[0] != null)
+        if (cachedWaypoints.Count > 0 && cachedWaypoints[0] != null)
         {
             agent.SetDestination(cachedWaypoints[currentWaypointIndex].position);
         }
@@ -82,7 +94,6 @@ public class GuardVisionAndAttackAction : Unity.Behavior.Action
                     {
                         playerInVision = true;
 
-                        // Spieler im Sichtfeld -> Angriff oder Verfolgung
                         if (distance <= attackRange)
                         {
                             agent.SetDestination(agent.transform.position); 
@@ -94,7 +105,6 @@ public class GuardVisionAndAttackAction : Unity.Behavior.Action
                         }
                         else
                         {
-                            // Ziel nur aktualisieren, wenn sich der Spieler bewegt hat oder Zeit vergangen ist (verhindert das Drehen!)
                             if (Time.time > lastDestinationUpdateTime + 0.3f || Vector3.Distance(player.position, lastPlayerDestination) > 1.0f)
                             {
                                 agent.SetDestination(player.position);
@@ -107,17 +117,16 @@ public class GuardVisionAndAttackAction : Unity.Behavior.Action
             }
         }
 
-        // 2. Wenn Spieler NICHT im Sichtfeld -> Patrouillieren
+        // 2. Patrouillieren, wenn Spieler nicht im Sichtfeld
         if (!playerInVision)
         {
-            if (cachedWaypoints != null && cachedWaypoints.Length > 0)
+            if (cachedWaypoints != null && cachedWaypoints.Count > 0)
             {
                 agent.speed = movementSpeed;
 
-                // Prüfen, ob der Wegpunkt erreicht wurde
                 if (agent.hasPath && agent.remainingDistance <= reachThreshold)
                 {
-                    currentWaypointIndex = (currentWaypointIndex + 1) % cachedWaypoints.Length;
+                    currentWaypointIndex = (currentWaypointIndex + 1) % cachedWaypoints.Count;
                     if (cachedWaypoints[currentWaypointIndex] != null)
                     {
                         agent.SetDestination(cachedWaypoints[currentWaypointIndex].position);
@@ -125,7 +134,6 @@ public class GuardVisionAndAttackAction : Unity.Behavior.Action
                 }
                 else if (!agent.hasPath && !agent.pathPending)
                 {
-                    // Falls kein Pfad aktiv ist, direkt zum aktuellen Wegpunkt setzen
                     if (cachedWaypoints[currentWaypointIndex] != null)
                     {
                         agent.SetDestination(cachedWaypoints[currentWaypointIndex].position);
