@@ -2,6 +2,7 @@ using Unity.Behavior;
 using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement; // Wichtig, um den Szenennamen zu prüfen
 
 public class EnemyHealth : MonoBehaviour
 {
@@ -48,11 +49,18 @@ public class EnemyHealth : MonoBehaviour
         isDead = true;
         Debug.Log("Wache wurde besiegt!");
 
-        // --- HIER WIRD DER MENUMANAGER INFORMIERT ---
-        MenuManager menuManager = Object.FindAnyObjectByType<MenuManager>();
-        if (menuManager != null)
+        // --- NUR in der SamuraiScene den MenuManager informieren ---
+        if (SceneManager.GetActiveScene().name == "SamuraiScene")
         {
-            menuManager.EnemyDefeat();
+            MenuManager menuManager = Object.FindAnyObjectByType<MenuManager>();
+            if (menuManager != null)
+            {
+                menuManager.EnemyDefeat();
+            }
+        }
+        else
+        {
+            Debug.Log("Wache in der Ninja-Szene besiegt – kein Szenenwechsel.");
         }
 
         // 1. NavMeshAgent ausschalten, damit sie aufhört sich zu bewegen

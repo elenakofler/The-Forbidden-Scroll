@@ -7,7 +7,8 @@ public class RestartGame : MonoBehaviour
     public void Restart()
     {
         Debug.Log("RESTART BUTTON CLICKED!");
-        SceneManager.LoadScene("SamuraiScene");
+        string lastLevel = PlayerPrefs.GetString("LastLevel", "SamuraiScene");
+        SceneManager.LoadScene(lastLevel);
     }
 
 }

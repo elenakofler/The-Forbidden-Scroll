@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class NinjaController : MonoBehaviour
 {
@@ -20,6 +21,11 @@ public class NinjaController : MonoBehaviour
     public Transform attackPoint;
     public float attackRange = 1.5f;
     public LayerMask enemyLayer;
+    public int attackDamage = 4; 
+    public Image healthBarFill;
+
+    private bool isGameOver = false;
+
 
     //a bool tell tells us if the Scroll has been pickt up, in this case it is fals because it hasn't been pickt up yet
     [Header("win condition")]
@@ -155,35 +161,54 @@ public class NinjaController : MonoBehaviour
     //used for the attack
     void Attack()
     {
-        Debug.Log("Ninja is attacking");
-        if (attackPoint != null)
+        Collider[] hitObjects = Physics.OverlapSphere(transform.position, attackRange);
+
+        
+        
+            foreach (Collider col in hitObjects)
         {
-            Collider[] hitEnemies = Physics.OverlapSphere(attackPoint.position, attackRange, enemyLayer);
-            foreach (Collider enemy in hitEnemies)
+            // Prüft, ob das Objekt das "EnemyHealth"-Skript hat
+            EnemyHealth guard = col.GetComponent<EnemyHealth>();
+            if (guard != null && !guard.IsDead())
             {
-                Debug.Log("Enemy was hit " + enemy.name);
+                guard.TakeDamage(attackDamage);
+                Debug.Log("Ninja is attacking");
+                break; // Beende die Schleife nach dem ersten Treffer
             }
         }
+        
     }
 
     //the damage calculation for the damage that the player takes, 
     //and if the HP sink to 0 its GameOver
     public void TakeDamage(int damage)
     {
-        currentHp -= damage;
+        if (currentHp <= 0) return;
+        currentHp = Mathf.Max(0, currentHp - damage);
+        healthBarFill.fillAmount = (float)currentHp / maxHp;
         Debug.Log("Ninja took damage: Current HP: " + currentHp);
 
-        if (currentHp <= 0)
+        if (currentHp == 0)
         {
             GameOver();
         }
     }
+   
 
     //for the Game over scene that is suppost to be played
     void GameOver()
     {
-        Debug.Log("GAME OVER! The Ninja died.");
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    isGameOver = true;
+    Debug.Log("GAME OVER! The Ninja died.");
+
+    // WICHTIG: Speichert genau die Szene, in der der Ninja gerade gestorben ist
+    PlayerPrefs.SetString("LastLevel", SceneManager.GetActiveScene().name);
+    PlayerPrefs.Save();
+
+    // Physikbewegung stoppen
+    rb.linearVelocity = Vector3.zero;
+    rb.angularVelocity = Vector3.zero;
+    SceneManager.LoadScene("GameOverScene");
     }
 
     //to collect the scroll 

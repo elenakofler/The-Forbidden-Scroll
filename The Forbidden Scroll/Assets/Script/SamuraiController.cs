@@ -157,30 +157,17 @@ public class SamuraiController : MonoBehaviour
 
     //for the Game over scene that is suppost to be played
     void GameOver()
-    {
-        isGameOver = true;
-        Debug.Log("GAME OVER! The Samurai died.");
+{
+    isGameOver = true;
+    Debug.Log("GAME OVER! The Ninja died.");
 
-        //Physikbewegung stoppen
-        rb.linearVelocity = Vector3.zero;
-        rb.angularVelocity = Vector3.zero;
-        SceneManager.LoadScene("GameOverScene");
-    }
+    // Merke dir das aktuelle Level, bevor wir zum Game Over wechseln
+    PlayerPrefs.SetString("LastLevel", SceneManager.GetActiveScene().name);
+    PlayerPrefs.Save();
 
-    //to collect the scroll 
-    public void CollectScroll()
-    {
-        hasScroll = true;
-        Debug.Log("VICTORY! The scroll has been recoverd!");
-    }
-
-    //shows the attack range of the enemie so it is easier to use in the editor mode
-    private void OnDrawGizmosSelected()
-    {
-        if (attackPoint != null)
-        {
-            Gizmos.color = Color.red;
-            Gizmos.DrawWireSphere(attackPoint.position, attackRange);
-        }
-    }
+    // Physikbewegung stoppen
+    rb.linearVelocity = Vector3.zero;
+    rb.angularVelocity = Vector3.zero;
+    SceneManager.LoadScene("GameOverScene");
+}
 }
