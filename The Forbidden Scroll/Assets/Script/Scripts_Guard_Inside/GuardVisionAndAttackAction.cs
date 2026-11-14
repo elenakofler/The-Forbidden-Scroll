@@ -2,11 +2,13 @@ using UnityEngine;
 using UnityEngine.AI;
 using Unity.Behavior;
 using System.Collections.Generic;
+using System.Linq;
 
 [System.Serializable, NodeDescription("Guard Vision and Attack", "Guard patrols or attacks player if in vision")]
 public class GuardVisionAndAttackAction : Unity.Behavior.Action
 {
     private NavMeshAgent agent;
+    private Rigidbody rb;
     private Transform player;
     private NinjaController playerHealth;
     
@@ -14,11 +16,10 @@ public class GuardVisionAndAttackAction : Unity.Behavior.Action
     private int currentWaypointIndex = 0;
 
     public float movementSpeed = 3.5f;
-    public float reachThreshold = 1.5f; 
+    public float reachThreshold = 2.0f; // Etwas erhöht, damit der Übergang butterweich ist
 
-    // Variable für das Blackboard-Array (Waypoints)
     [SerializeReference]
-    public BlackboardVariable<List<GameObject>> Waypoints;
+    public BlackboardVariable<GameObject> Player;
 
     public float viewDistance = 12.0f; 
     public float viewAngle = 90.0f;    
@@ -29,19 +30,34 @@ public class GuardVisionAndAttackAction : Unity.Behavior.Action
 
     private Vector3 lastPlayerDestination;
     private float lastDestinationUpdateTime;
+    private bool wasPlayerInVisionLastFrame = false;
 
     protected override Status OnStart()
     {
         if (GameObject != null)
         {
             agent = GameObject.GetComponent<NavMeshAgent>();
+            rb = GameObject.GetComponent<Rigidbody>();
         }
         if (agent == null)
         {
             agent = Object.FindAnyObjectByType<NavMeshAgent>();
         }
 
-        GameObject playerObj = GameObject.FindGameObjectWithTag("Player");
+        if (rb != null) rb.isKinematic = true;
+
+        // Spieler finden
+        GameObject playerObj = null;
+        if (Player != null && Player.Value != null)
+        {
+            playerObj = Player.Value;
+        }
+        else
+        {
+            playerObj = GameObject.FindGameObjectWithTag("Player");
+            if (playerObj == null) playerObj = GameObject.Find("Ninja");
+        }
+
         if (playerObj != null)
         {
             player = playerObj.transform;
@@ -50,29 +66,32 @@ public class GuardVisionAndAttackAction : Unity.Behavior.Action
 
         if (agent == null) return Status.Failure;
 
-        // Wegpunkte aus dem Blackboard auslesen
+        // Wegpunkte automatisch im Parent finden
         cachedWaypoints.Clear();
-        if (Waypoints != null && Waypoints.Value != null)
+        if (agent.transform.parent != null)
         {
-            foreach (GameObject obj in Waypoints.Value)
-            {
-                if (obj != null) cachedWaypoints.Add(obj.transform);
-            }
+            cachedWaypoints = agent.transform.parent
+                .Cast<Transform>()
+                .Where(t => t.name.StartsWith("Point"))
+                .OrderBy(t => t.name)
+                .ToList();
         }
 
         agent.speed = movementSpeed;
+        agent.isStopped = false;
         
         if (cachedWaypoints.Count > 0 && cachedWaypoints[0] != null)
         {
             agent.SetDestination(cachedWaypoints[currentWaypointIndex].position);
         }
 
+        wasPlayerInVisionLastFrame = false;
         return Status.Running;
     }
 
     protected override Status OnUpdate()
     {
-        if (agent == null) return Status.Failure;
+        if (agent == null || !agent.isOnNavMesh) return Status.Running;
 
         bool playerInVision = false;
 
@@ -90,26 +109,36 @@ public class GuardVisionAndAttackAction : Unity.Behavior.Action
 
                 if (angle <= viewAngle / 2f)
                 {
-                    if (!Physics.Linecast(agent.transform.position + Vector3.up * 1.0f, player.position + Vector3.up * 1.0f))
-                    {
-                        playerInVision = true;
+                    Vector3 rayStart = agent.transform.position + Vector3.up * 1.0f;
+                    RaycastHit hit;
 
-                        if (distance <= attackRange)
+                    if (Physics.Raycast(rayStart, directionToPlayer.normalized, out hit, viewDistance))
+                    {
+                        if (hit.transform == player || hit.transform.IsChildOf(player))
                         {
-                            agent.SetDestination(agent.transform.position); 
-                            if (Time.time >= lastAttackTime + attackCooldown)
+                            playerInVision = true;
+
+                            agent.speed = movementSpeed;
+                            agent.isStopped = false;
+
+                            if (distance <= attackRange)
                             {
-                                lastAttackTime = Time.time;
-                                if (playerHealth != null) playerHealth.TakeDamage(damage);
+                                agent.SetDestination(agent.transform.position); 
+                                if (Time.time >= lastAttackTime + attackCooldown)
+                                {
+                                    lastAttackTime = Time.time;
+                                    if (playerHealth != null) playerHealth.TakeDamage(damage);
+                                }
                             }
-                        }
-                        else
-                        {
-                            if (Time.time > lastDestinationUpdateTime + 0.3f || Vector3.Distance(player.position, lastPlayerDestination) > 1.0f)
+                            else
                             {
-                                agent.SetDestination(player.position);
-                                lastPlayerDestination = player.position;
-                                lastDestinationUpdateTime = Time.time;
+                                // Verfolgung ohne Ruckeln
+                                if (Time.time > lastDestinationUpdateTime + 0.05f || Vector3.Distance(player.position, lastPlayerDestination) > 0.1f)
+                                {
+                                    agent.SetDestination(player.position);
+                                    lastPlayerDestination = player.position;
+                                    lastDestinationUpdateTime = Time.time;
+                                }
                             }
                         }
                     }
@@ -117,26 +146,41 @@ public class GuardVisionAndAttackAction : Unity.Behavior.Action
             }
         }
 
-        // 2. Patrouillieren, wenn Spieler nicht im Sichtfeld
+        // --- ÜBERGANG: Zurück zur Patrouille ---
+        if (wasPlayerInVisionLastFrame && !playerInVision)
+        {
+            agent.isStopped = false;
+            if (cachedWaypoints.Count > 0 && cachedWaypoints[currentWaypointIndex] != null)
+            {
+                agent.SetDestination(cachedWaypoints[currentWaypointIndex].position);
+            }
+        }
+        wasPlayerInVisionLastFrame = playerInVision;
+
+        // 2. Patrouillieren
         if (!playerInVision)
         {
             if (cachedWaypoints != null && cachedWaypoints.Count > 0)
             {
                 agent.speed = movementSpeed;
+                agent.isStopped = false;
 
-                if (agent.hasPath && agent.remainingDistance <= reachThreshold)
+                Transform targetPoint = cachedWaypoints[currentWaypointIndex];
+                if (targetPoint != null)
                 {
-                    currentWaypointIndex = (currentWaypointIndex + 1) % cachedWaypoints.Count;
-                    if (cachedWaypoints[currentWaypointIndex] != null)
+                    float distanceToWaypoint = Vector3.Distance(
+                        new Vector3(agent.transform.position.x, 0, agent.transform.position.z), 
+                        new Vector3(targetPoint.position.x, 0, targetPoint.position.z)
+                    );
+
+                    // Wechselt zum nächsten Wegpunkt, sobald er nah genug ist
+                    if (distanceToWaypoint <= reachThreshold || (!agent.hasPath && !agent.pathPending))
                     {
-                        agent.SetDestination(cachedWaypoints[currentWaypointIndex].position);
-                    }
-                }
-                else if (!agent.hasPath && !agent.pathPending)
-                {
-                    if (cachedWaypoints[currentWaypointIndex] != null)
-                    {
-                        agent.SetDestination(cachedWaypoints[currentWaypointIndex].position);
+                        currentWaypointIndex = (currentWaypointIndex + 1) % cachedWaypoints.Count;
+                        if (cachedWaypoints[currentWaypointIndex] != null)
+                        {
+                            agent.SetDestination(cachedWaypoints[currentWaypointIndex].position);
+                        }
                     }
                 }
             }

@@ -28841,7 +28841,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8059344484066032934, guid: f4d19f8d67279f1428f17be73aa6222d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.99698997
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8059344484066032934, guid: f4d19f8d67279f1428f17be73aa6222d, type: 3}
       propertyPath: m_LocalPosition.z
@@ -28883,11 +28883,6 @@ PrefabInstance:
 --- !u!4 &28226635 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8059344484066032934, guid: f4d19f8d67279f1428f17be73aa6222d, type: 3}
-  m_PrefabInstance: {fileID: 28226634}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &28226636 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5282312538100184827, guid: f4d19f8d67279f1428f17be73aa6222d, type: 3}
   m_PrefabInstance: {fileID: 28226634}
   m_PrefabAsset: {fileID: 0}
 --- !u!43 &33198350
@@ -29308,11 +29303,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 39179047}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1 &42484501 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1139227819760793516, guid: 32d20f49476277040b81024fea443581, type: 3}
-  m_PrefabInstance: {fileID: 6724268673117853766}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &42484502 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1159987186348884118, guid: 32d20f49476277040b81024fea443581, type: 3}
@@ -61296,11 +61286,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1159987186348884118, guid: 32d20f49476277040b81024fea443581, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 6.7
+      value: 6.43
       objectReference: {fileID: 0}
     - target: {fileID: 1159987186348884118, guid: 32d20f49476277040b81024fea443581, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.99698997
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1159987186348884118, guid: 32d20f49476277040b81024fea443581, type: 3}
       propertyPath: m_LocalPosition.z
@@ -61342,11 +61332,6 @@ PrefabInstance:
 --- !u!4 &158747815 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1159987186348884118, guid: 32d20f49476277040b81024fea443581, type: 3}
-  m_PrefabInstance: {fileID: 158747814}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &158747816 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1139227819760793516, guid: 32d20f49476277040b81024fea443581, type: 3}
   m_PrefabInstance: {fileID: 158747814}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &160429329
@@ -69620,8 +69605,6 @@ MonoBehaviour:
   m_Graph: {fileID: 8014858786384176814, guid: 5f669e70eac49d641aa47ec48bbdb545, type: 2}
   m_BlackboardVariableOverridesList:
   - rid: 2275768270082277466
-  - rid: 2275768372998963308
-  - rid: 2275768372998963309
   m_OriginalGraph: {fileID: 0}
   m_IsInitialised: 0
   m_IsStarted: 0
@@ -69636,24 +69619,6 @@ MonoBehaviour:
           m_Value1: 0
         Name: Self
         m_Value: {fileID: 165401279}
-    - rid: 2275768372998963308
-      type: {class: 'BlackboardVariable`1[[UnityEngine.GameObject, UnityEngine.CoreModule]]', ns: Unity.Behavior, asm: Unity.Behavior}
-      data:
-        GUID:
-          m_Value0: 7891520172658379570
-          m_Value1: 17382770508162482377
-        Name: Player
-        m_Value: {fileID: 1381811558}
-    - rid: 2275768372998963309
-      type: {class: 'BlackboardVariable`1[[System.Collections.Generic.List`1[[UnityEngine.GameObject, UnityEngine.CoreModule]], mscorlib]]', ns: Unity.Behavior, asm: Unity.Behavior}
-      data:
-        GUID:
-          m_Value0: 12538452929572930933
-          m_Value1: 13806596646586389485
-        Name: Waypoints
-        m_Value:
-        - {fileID: 158747816}
-        - {fileID: 1529521919}
 --- !u!54 &165401284
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -69690,11 +69655,11 @@ NavMeshAgent:
   m_GameObject: {fileID: 165401279}
   m_Enabled: 1
   m_AgentTypeID: 0
-  m_Radius: 0.5
+  m_Radius: 0.3
   m_Speed: 3.5
   m_Acceleration: 8
   avoidancePriority: 50
-  m_AngularSpeed: 120
+  m_AngularSpeed: 360
   m_StoppingDistance: 1.5
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
@@ -69702,7 +69667,7 @@ NavMeshAgent:
   m_Height: 2
   m_BaseOffset: 1
   m_WalkableMask: 4294967295
-  m_ObstacleAvoidanceType: 4
+  m_ObstacleAvoidanceType: 1
 --- !u!136 &165401286
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -79703,7 +79668,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8059344484066032934, guid: f4d19f8d67279f1428f17be73aa6222d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.99698997
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8059344484066032934, guid: f4d19f8d67279f1428f17be73aa6222d, type: 3}
       propertyPath: m_LocalPosition.z
@@ -79745,11 +79710,6 @@ PrefabInstance:
 --- !u!4 &200179669 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8059344484066032934, guid: f4d19f8d67279f1428f17be73aa6222d, type: 3}
-  m_PrefabInstance: {fileID: 200179668}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &200179670 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5282312538100184827, guid: f4d19f8d67279f1428f17be73aa6222d, type: 3}
   m_PrefabInstance: {fileID: 200179668}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &200815425
@@ -80898,7 +80858,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GuardVisionVisualizer
   viewDistance: 12
-  viewAngle: 90
+  viewAngle: 70
   segments: 20
   visionColor: {r: 0.5450981, g: 0, b: 0, a: 0.7529412}
 --- !u!23 &223540715
@@ -147947,7 +147907,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8059344484066032934, guid: f4d19f8d67279f1428f17be73aa6222d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.99698997
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8059344484066032934, guid: f4d19f8d67279f1428f17be73aa6222d, type: 3}
       propertyPath: m_LocalPosition.z
@@ -147989,11 +147949,6 @@ PrefabInstance:
 --- !u!4 &375441356 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8059344484066032934, guid: f4d19f8d67279f1428f17be73aa6222d, type: 3}
-  m_PrefabInstance: {fileID: 375441355}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &375441357 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5282312538100184827, guid: f4d19f8d67279f1428f17be73aa6222d, type: 3}
   m_PrefabInstance: {fileID: 375441355}
   m_PrefabAsset: {fileID: 0}
 --- !u!43 &376245514
@@ -148379,7 +148334,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 03b115ff5a690004a9e525440b1dab57, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GuardVisionGizmo
-  viewDistance: 12
+  viewDistance: 14
   viewAngle: 90
 --- !u!114 &379436666
 MonoBehaviour:
@@ -148410,8 +148365,6 @@ MonoBehaviour:
   m_Graph: {fileID: 8014858786384176814, guid: 5f669e70eac49d641aa47ec48bbdb545, type: 2}
   m_BlackboardVariableOverridesList:
   - rid: 2275768270082277466
-  - rid: 2275768372998963308
-  - rid: 2275768372998963309
   m_OriginalGraph: {fileID: 0}
   m_IsInitialised: 0
   m_IsStarted: 0
@@ -148426,24 +148379,6 @@ MonoBehaviour:
           m_Value1: 0
         Name: Self
         m_Value: {fileID: 379436663}
-    - rid: 2275768372998963308
-      type: {class: 'BlackboardVariable`1[[UnityEngine.GameObject, UnityEngine.CoreModule]]', ns: Unity.Behavior, asm: Unity.Behavior}
-      data:
-        GUID:
-          m_Value0: 7891520172658379570
-          m_Value1: 17382770508162482377
-        Name: Player
-        m_Value: {fileID: 1381811558}
-    - rid: 2275768372998963309
-      type: {class: 'BlackboardVariable`1[[System.Collections.Generic.List`1[[UnityEngine.GameObject, UnityEngine.CoreModule]], mscorlib]]', ns: Unity.Behavior, asm: Unity.Behavior}
-      data:
-        GUID:
-          m_Value0: 12538452929572930933
-          m_Value1: 13806596646586389485
-        Name: Waypoints
-        m_Value:
-        - {fileID: 623584963}
-        - {fileID: 1059971432}
 --- !u!54 &379436668
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -148480,11 +148415,11 @@ NavMeshAgent:
   m_GameObject: {fileID: 379436663}
   m_Enabled: 1
   m_AgentTypeID: 0
-  m_Radius: 0.5
+  m_Radius: 0.3
   m_Speed: 3.5
   m_Acceleration: 8
   avoidancePriority: 50
-  m_AngularSpeed: 120
+  m_AngularSpeed: 360
   m_StoppingDistance: 1.5
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
@@ -148492,7 +148427,7 @@ NavMeshAgent:
   m_Height: 2
   m_BaseOffset: 1
   m_WalkableMask: 4294967295
-  m_ObstacleAvoidanceType: 4
+  m_ObstacleAvoidanceType: 1
 --- !u!136 &379436670
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -194202,11 +194137,6 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
---- !u!1 &526971252 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5282312538100184827, guid: f4d19f8d67279f1428f17be73aa6222d, type: 3}
-  m_PrefabInstance: {fileID: 2959747339416683158}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &526971253 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8059344484066032934, guid: f4d19f8d67279f1428f17be73aa6222d, type: 3}
@@ -196652,7 +196582,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1159987186348884118, guid: 32d20f49476277040b81024fea443581, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.99698997
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1159987186348884118, guid: 32d20f49476277040b81024fea443581, type: 3}
       propertyPath: m_LocalPosition.z
@@ -196694,11 +196624,6 @@ PrefabInstance:
 --- !u!4 &558406136 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1159987186348884118, guid: 32d20f49476277040b81024fea443581, type: 3}
-  m_PrefabInstance: {fileID: 558406135}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &558406137 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1139227819760793516, guid: 32d20f49476277040b81024fea443581, type: 3}
   m_PrefabInstance: {fileID: 558406135}
   m_PrefabAsset: {fileID: 0}
 --- !u!4 &560379011 stripped
@@ -196883,7 +196808,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 03b115ff5a690004a9e525440b1dab57, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GuardVisionGizmo
-  viewDistance: 12
+  viewDistance: 14
   viewAngle: 90
 --- !u!114 &585053273
 MonoBehaviour:
@@ -196914,8 +196839,6 @@ MonoBehaviour:
   m_Graph: {fileID: 8014858786384176814, guid: 5f669e70eac49d641aa47ec48bbdb545, type: 2}
   m_BlackboardVariableOverridesList:
   - rid: 2275768270082277466
-  - rid: 2275768372998963308
-  - rid: 2275768372998963309
   m_OriginalGraph: {fileID: 0}
   m_IsInitialised: 0
   m_IsStarted: 0
@@ -196930,24 +196853,6 @@ MonoBehaviour:
           m_Value1: 0
         Name: Self
         m_Value: {fileID: 585053270}
-    - rid: 2275768372998963308
-      type: {class: 'BlackboardVariable`1[[UnityEngine.GameObject, UnityEngine.CoreModule]]', ns: Unity.Behavior, asm: Unity.Behavior}
-      data:
-        GUID:
-          m_Value0: 7891520172658379570
-          m_Value1: 17382770508162482377
-        Name: Player
-        m_Value: {fileID: 1381811558}
-    - rid: 2275768372998963309
-      type: {class: 'BlackboardVariable`1[[System.Collections.Generic.List`1[[UnityEngine.GameObject, UnityEngine.CoreModule]], mscorlib]]', ns: Unity.Behavior, asm: Unity.Behavior}
-      data:
-        GUID:
-          m_Value0: 12538452929572930933
-          m_Value1: 13806596646586389485
-        Name: Waypoints
-        m_Value:
-        - {fileID: 42484501}
-        - {fileID: 526971252}
 --- !u!54 &585053275
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -196984,11 +196889,11 @@ NavMeshAgent:
   m_GameObject: {fileID: 585053270}
   m_Enabled: 1
   m_AgentTypeID: 0
-  m_Radius: 0.5
+  m_Radius: 0.3
   m_Speed: 3.5
-  m_Acceleration: 8
+  m_Acceleration: 15
   avoidancePriority: 50
-  m_AngularSpeed: 120
+  m_AngularSpeed: 360
   m_StoppingDistance: 1.5
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
@@ -196996,7 +196901,7 @@ NavMeshAgent:
   m_Height: 2
   m_BaseOffset: 1
   m_WalkableMask: 4294967295
-  m_ObstacleAvoidanceType: 4
+  m_ObstacleAvoidanceType: 1
 --- !u!136 &585053277
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -197542,7 +197447,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GuardVisionVisualizer
   viewDistance: 12
-  viewAngle: 90
+  viewAngle: 70
   segments: 20
   visionColor: {r: 0.5450981, g: 0, b: 0, a: 0.7529412}
 --- !u!23 &593992658
@@ -198365,7 +198270,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1159987186348884118, guid: 32d20f49476277040b81024fea443581, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.99698997
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1159987186348884118, guid: 32d20f49476277040b81024fea443581, type: 3}
       propertyPath: m_LocalPosition.z
@@ -198407,11 +198312,6 @@ PrefabInstance:
 --- !u!4 &623584962 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1159987186348884118, guid: 32d20f49476277040b81024fea443581, type: 3}
-  m_PrefabInstance: {fileID: 623584961}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &623584963 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1139227819760793516, guid: 32d20f49476277040b81024fea443581, type: 3}
   m_PrefabInstance: {fileID: 623584961}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &625456791
@@ -200421,7 +200321,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 03b115ff5a690004a9e525440b1dab57, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GuardVisionGizmo
-  viewDistance: 12
+  viewDistance: 14
   viewAngle: 90
 --- !u!114 &658597261
 MonoBehaviour:
@@ -200452,8 +200352,6 @@ MonoBehaviour:
   m_Graph: {fileID: 8014858786384176814, guid: 5f669e70eac49d641aa47ec48bbdb545, type: 2}
   m_BlackboardVariableOverridesList:
   - rid: 2275768270082277466
-  - rid: 2275768372998963308
-  - rid: 2275768372998963309
   m_OriginalGraph: {fileID: 0}
   m_IsInitialised: 0
   m_IsStarted: 0
@@ -200468,24 +200366,6 @@ MonoBehaviour:
           m_Value1: 0
         Name: Self
         m_Value: {fileID: 658597258}
-    - rid: 2275768372998963308
-      type: {class: 'BlackboardVariable`1[[UnityEngine.GameObject, UnityEngine.CoreModule]]', ns: Unity.Behavior, asm: Unity.Behavior}
-      data:
-        GUID:
-          m_Value0: 7891520172658379570
-          m_Value1: 17382770508162482377
-        Name: Player
-        m_Value: {fileID: 1381811558}
-    - rid: 2275768372998963309
-      type: {class: 'BlackboardVariable`1[[System.Collections.Generic.List`1[[UnityEngine.GameObject, UnityEngine.CoreModule]], mscorlib]]', ns: Unity.Behavior, asm: Unity.Behavior}
-      data:
-        GUID:
-          m_Value0: 12538452929572930933
-          m_Value1: 13806596646586389485
-        Name: Waypoints
-        m_Value:
-        - {fileID: 1782693050}
-        - {fileID: 1564732785}
 --- !u!54 &658597263
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -200522,11 +200402,11 @@ NavMeshAgent:
   m_GameObject: {fileID: 658597258}
   m_Enabled: 1
   m_AgentTypeID: 0
-  m_Radius: 0.5
+  m_Radius: 0.3
   m_Speed: 3.5
   m_Acceleration: 8
   avoidancePriority: 50
-  m_AngularSpeed: 120
+  m_AngularSpeed: 360
   m_StoppingDistance: 1.5
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
@@ -200534,7 +200414,7 @@ NavMeshAgent:
   m_Height: 2
   m_BaseOffset: 1
   m_WalkableMask: 4294967295
-  m_ObstacleAvoidanceType: 4
+  m_ObstacleAvoidanceType: 1
 --- !u!136 &658597265
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -208233,11 +208113,6 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 4299525254502155967, guid: ace2d4505af60b44baf71e66beb90ace, type: 3}
   m_PrefabInstance: {fileID: 670546581}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &673953736 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 477268525398176380, guid: 5d4f4c336683f2647a18e79783aef530, type: 3}
-  m_PrefabInstance: {fileID: 1510575921}
   m_PrefabAsset: {fileID: 0}
 --- !u!4 &673953737 stripped
 Transform:
@@ -225240,7 +225115,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GuardVisionVisualizer
   viewDistance: 12
-  viewAngle: 90
+  viewAngle: 70
   segments: 20
   visionColor: {r: 0.5450981, g: 0, b: 0, a: 0.7529412}
 --- !u!23 &760466828
@@ -227916,7 +227791,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1159987186348884118, guid: 32d20f49476277040b81024fea443581, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.99698997
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1159987186348884118, guid: 32d20f49476277040b81024fea443581, type: 3}
       propertyPath: m_LocalPosition.z
@@ -227958,11 +227833,6 @@ PrefabInstance:
 --- !u!4 &796756651 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1159987186348884118, guid: 32d20f49476277040b81024fea443581, type: 3}
-  m_PrefabInstance: {fileID: 796756650}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &796756652 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1139227819760793516, guid: 32d20f49476277040b81024fea443581, type: 3}
   m_PrefabInstance: {fileID: 796756650}
   m_PrefabAsset: {fileID: 0}
 --- !u!43 &798573734
@@ -239450,8 +239320,6 @@ MonoBehaviour:
   m_Graph: {fileID: 8014858786384176814, guid: 5f669e70eac49d641aa47ec48bbdb545, type: 2}
   m_BlackboardVariableOverridesList:
   - rid: 2275768270082277466
-  - rid: 2275768372998963308
-  - rid: 2275768372998963309
   m_OriginalGraph: {fileID: 0}
   m_IsInitialised: 0
   m_IsStarted: 0
@@ -239466,24 +239334,6 @@ MonoBehaviour:
           m_Value1: 0
         Name: Self
         m_Value: {fileID: 830095331}
-    - rid: 2275768372998963308
-      type: {class: 'BlackboardVariable`1[[UnityEngine.GameObject, UnityEngine.CoreModule]]', ns: Unity.Behavior, asm: Unity.Behavior}
-      data:
-        GUID:
-          m_Value0: 7891520172658379570
-          m_Value1: 17382770508162482377
-        Name: Player
-        m_Value: {fileID: 1381811558}
-    - rid: 2275768372998963309
-      type: {class: 'BlackboardVariable`1[[System.Collections.Generic.List`1[[UnityEngine.GameObject, UnityEngine.CoreModule]], mscorlib]]', ns: Unity.Behavior, asm: Unity.Behavior}
-      data:
-        GUID:
-          m_Value0: 12538452929572930933
-          m_Value1: 13806596646586389485
-        Name: Waypoints
-        m_Value:
-        - {fileID: 558406137}
-        - {fileID: 28226636}
 --- !u!54 &830095336
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -239520,11 +239370,11 @@ NavMeshAgent:
   m_GameObject: {fileID: 830095331}
   m_Enabled: 1
   m_AgentTypeID: 0
-  m_Radius: 0.5
+  m_Radius: 0.3
   m_Speed: 3.5
   m_Acceleration: 8
   avoidancePriority: 50
-  m_AngularSpeed: 120
+  m_AngularSpeed: 360
   m_StoppingDistance: 1.5
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
@@ -239532,7 +239382,7 @@ NavMeshAgent:
   m_Height: 2
   m_BaseOffset: 1
   m_WalkableMask: 4294967295
-  m_ObstacleAvoidanceType: 4
+  m_ObstacleAvoidanceType: 1
 --- !u!136 &830095338
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -270489,7 +270339,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 03b115ff5a690004a9e525440b1dab57, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GuardVisionGizmo
-  viewDistance: 12
+  viewDistance: 14
   viewAngle: 90
 --- !u!114 &890696417
 MonoBehaviour:
@@ -270520,8 +270370,6 @@ MonoBehaviour:
   m_Graph: {fileID: 8014858786384176814, guid: 5f669e70eac49d641aa47ec48bbdb545, type: 2}
   m_BlackboardVariableOverridesList:
   - rid: 2275768270082277466
-  - rid: 2275768372998963308
-  - rid: 2275768372998963309
   m_OriginalGraph: {fileID: 0}
   m_IsInitialised: 0
   m_IsStarted: 0
@@ -270536,24 +270384,6 @@ MonoBehaviour:
           m_Value1: 0
         Name: Self
         m_Value: {fileID: 890696414}
-    - rid: 2275768372998963308
-      type: {class: 'BlackboardVariable`1[[UnityEngine.GameObject, UnityEngine.CoreModule]]', ns: Unity.Behavior, asm: Unity.Behavior}
-      data:
-        GUID:
-          m_Value0: 7891520172658379570
-          m_Value1: 17382770508162482377
-        Name: Player
-        m_Value: {fileID: 1381811558}
-    - rid: 2275768372998963309
-      type: {class: 'BlackboardVariable`1[[System.Collections.Generic.List`1[[UnityEngine.GameObject, UnityEngine.CoreModule]], mscorlib]]', ns: Unity.Behavior, asm: Unity.Behavior}
-      data:
-        GUID:
-          m_Value0: 12538452929572930933
-          m_Value1: 13806596646586389485
-        Name: Waypoints
-        m_Value:
-        - {fileID: 1180070640}
-        - {fileID: 976705097}
 --- !u!54 &890696419
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -270590,11 +270420,11 @@ NavMeshAgent:
   m_GameObject: {fileID: 890696414}
   m_Enabled: 1
   m_AgentTypeID: 0
-  m_Radius: 0.5
+  m_Radius: 0.3
   m_Speed: 3.5
   m_Acceleration: 8
   avoidancePriority: 50
-  m_AngularSpeed: 120
+  m_AngularSpeed: 360
   m_StoppingDistance: 1.5
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
@@ -270602,7 +270432,7 @@ NavMeshAgent:
   m_Height: 2
   m_BaseOffset: 1
   m_WalkableMask: 4294967295
-  m_ObstacleAvoidanceType: 4
+  m_ObstacleAvoidanceType: 1
 --- !u!136 &890696421
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -298758,7 +298588,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8059344484066032934, guid: f4d19f8d67279f1428f17be73aa6222d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.99698997
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8059344484066032934, guid: f4d19f8d67279f1428f17be73aa6222d, type: 3}
       propertyPath: m_LocalPosition.z
@@ -298800,11 +298630,6 @@ PrefabInstance:
 --- !u!4 &976705096 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8059344484066032934, guid: f4d19f8d67279f1428f17be73aa6222d, type: 3}
-  m_PrefabInstance: {fileID: 976705095}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &976705097 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5282312538100184827, guid: f4d19f8d67279f1428f17be73aa6222d, type: 3}
   m_PrefabInstance: {fileID: 976705095}
   m_PrefabAsset: {fileID: 0}
 --- !u!4 &981083736 stripped
@@ -313622,11 +313447,6 @@ MonoBehaviour:
   m_SelectedFaces: 
   m_SelectedEdges: []
   m_SelectedVertices: 
---- !u!1 &1053677051 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7367867181921685029, guid: b97a62a3415271b4fafc7580a6edb152, type: 3}
-  m_PrefabInstance: {fileID: 296999850}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1053677052 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8784745735321188639, guid: b97a62a3415271b4fafc7580a6edb152, type: 3}
@@ -314727,7 +314547,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8059344484066032934, guid: f4d19f8d67279f1428f17be73aa6222d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.99698997
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8059344484066032934, guid: f4d19f8d67279f1428f17be73aa6222d, type: 3}
       propertyPath: m_LocalPosition.z
@@ -314769,11 +314589,6 @@ PrefabInstance:
 --- !u!4 &1059971431 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8059344484066032934, guid: f4d19f8d67279f1428f17be73aa6222d, type: 3}
-  m_PrefabInstance: {fileID: 1059971430}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1059971432 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5282312538100184827, guid: f4d19f8d67279f1428f17be73aa6222d, type: 3}
   m_PrefabInstance: {fileID: 1059971430}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1063534651
@@ -316709,7 +316524,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GuardVisionVisualizer
   viewDistance: 12
-  viewAngle: 90
+  viewAngle: 70
   segments: 20
   visionColor: {r: 0.5450981, g: 0, b: 0, a: 0.7529412}
 --- !u!23 &1074730274
@@ -337000,7 +336815,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1159987186348884118, guid: 32d20f49476277040b81024fea443581, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.99698997
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1159987186348884118, guid: 32d20f49476277040b81024fea443581, type: 3}
       propertyPath: m_LocalPosition.z
@@ -337042,11 +336857,6 @@ PrefabInstance:
 --- !u!4 &1180070639 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1159987186348884118, guid: 32d20f49476277040b81024fea443581, type: 3}
-  m_PrefabInstance: {fileID: 1180070638}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1180070640 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1139227819760793516, guid: 32d20f49476277040b81024fea443581, type: 3}
   m_PrefabInstance: {fileID: 1180070638}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1187006164
@@ -346859,8 +346669,6 @@ MonoBehaviour:
   m_Graph: {fileID: 8014858786384176814, guid: 5f669e70eac49d641aa47ec48bbdb545, type: 2}
   m_BlackboardVariableOverridesList:
   - rid: 2275768270082277466
-  - rid: 2275768372998963308
-  - rid: 2275768372998963309
   m_OriginalGraph: {fileID: 0}
   m_IsInitialised: 0
   m_IsStarted: 0
@@ -346875,24 +346683,6 @@ MonoBehaviour:
           m_Value1: 0
         Name: Self
         m_Value: {fileID: 1272182556}
-    - rid: 2275768372998963308
-      type: {class: 'BlackboardVariable`1[[UnityEngine.GameObject, UnityEngine.CoreModule]]', ns: Unity.Behavior, asm: Unity.Behavior}
-      data:
-        GUID:
-          m_Value0: 7891520172658379570
-          m_Value1: 17382770508162482377
-        Name: Player
-        m_Value: {fileID: 1381811558}
-    - rid: 2275768372998963309
-      type: {class: 'BlackboardVariable`1[[System.Collections.Generic.List`1[[UnityEngine.GameObject, UnityEngine.CoreModule]], mscorlib]]', ns: Unity.Behavior, asm: Unity.Behavior}
-      data:
-        GUID:
-          m_Value0: 12538452929572930933
-          m_Value1: 13806596646586389485
-        Name: Waypoints
-        m_Value:
-        - {fileID: 1853887921}
-        - {fileID: 1302361948}
 --- !u!54 &1272182561
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -346929,11 +346719,11 @@ NavMeshAgent:
   m_GameObject: {fileID: 1272182556}
   m_Enabled: 1
   m_AgentTypeID: 0
-  m_Radius: 0.5
+  m_Radius: 0.3
   m_Speed: 3.5
   m_Acceleration: 8
   avoidancePriority: 50
-  m_AngularSpeed: 120
+  m_AngularSpeed: 360
   m_StoppingDistance: 1.5
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
@@ -346941,7 +346731,7 @@ NavMeshAgent:
   m_Height: 2
   m_BaseOffset: 1
   m_WalkableMask: 4294967295
-  m_ObstacleAvoidanceType: 4
+  m_ObstacleAvoidanceType: 1
 --- !u!136 &1272182563
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -356036,7 +355826,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8059344484066032934, guid: f4d19f8d67279f1428f17be73aa6222d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.99698997
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8059344484066032934, guid: f4d19f8d67279f1428f17be73aa6222d, type: 3}
       propertyPath: m_LocalPosition.z
@@ -356078,11 +355868,6 @@ PrefabInstance:
 --- !u!4 &1302361947 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8059344484066032934, guid: f4d19f8d67279f1428f17be73aa6222d, type: 3}
-  m_PrefabInstance: {fileID: 1302361946}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1302361948 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5282312538100184827, guid: f4d19f8d67279f1428f17be73aa6222d, type: 3}
   m_PrefabInstance: {fileID: 1302361946}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1303165483
@@ -378640,11 +378425,6 @@ MonoBehaviour:
   m_SelectedFaces: 
   m_SelectedEdges: []
   m_SelectedVertices: 
---- !u!1 &1381811558 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1662158486570866757, guid: bed77a1e1065beb4b8727e820b018da1, type: 3}
-  m_PrefabInstance: {fileID: 859560078}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1382635803
 GameObject:
   m_ObjectHideFlags: 0
@@ -391691,7 +391471,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1159987186348884118, guid: 32d20f49476277040b81024fea443581, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.99698997
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1159987186348884118, guid: 32d20f49476277040b81024fea443581, type: 3}
       propertyPath: m_LocalPosition.z
@@ -391733,11 +391513,6 @@ PrefabInstance:
 --- !u!4 &1435187064 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1159987186348884118, guid: 32d20f49476277040b81024fea443581, type: 3}
-  m_PrefabInstance: {fileID: 1435187063}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1435187065 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1139227819760793516, guid: 32d20f49476277040b81024fea443581, type: 3}
   m_PrefabInstance: {fileID: 1435187063}
   m_PrefabAsset: {fileID: 0}
 --- !u!43 &1440419114
@@ -411789,11 +411564,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8059344484066032934, guid: f4d19f8d67279f1428f17be73aa6222d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 6.7
+      value: 6.53
       objectReference: {fileID: 0}
     - target: {fileID: 8059344484066032934, guid: f4d19f8d67279f1428f17be73aa6222d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.99698997
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8059344484066032934, guid: f4d19f8d67279f1428f17be73aa6222d, type: 3}
       propertyPath: m_LocalPosition.z
@@ -411835,11 +411610,6 @@ PrefabInstance:
 --- !u!4 &1529521918 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8059344484066032934, guid: f4d19f8d67279f1428f17be73aa6222d, type: 3}
-  m_PrefabInstance: {fileID: 1529521917}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1529521919 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5282312538100184827, guid: f4d19f8d67279f1428f17be73aa6222d, type: 3}
   m_PrefabInstance: {fileID: 1529521917}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1530850186
@@ -411895,7 +411665,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 03b115ff5a690004a9e525440b1dab57, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GuardVisionGizmo
-  viewDistance: 12
+  viewDistance: 14
   viewAngle: 90
 --- !u!114 &1530850189
 MonoBehaviour:
@@ -411926,8 +411696,6 @@ MonoBehaviour:
   m_Graph: {fileID: 8014858786384176814, guid: 5f669e70eac49d641aa47ec48bbdb545, type: 2}
   m_BlackboardVariableOverridesList:
   - rid: 2275768270082277466
-  - rid: 2275768372998963308
-  - rid: 2275768372998963309
   m_OriginalGraph: {fileID: 0}
   m_IsInitialised: 0
   m_IsStarted: 0
@@ -411942,24 +411710,6 @@ MonoBehaviour:
           m_Value1: 0
         Name: Self
         m_Value: {fileID: 1530850186}
-    - rid: 2275768372998963308
-      type: {class: 'BlackboardVariable`1[[UnityEngine.GameObject, UnityEngine.CoreModule]]', ns: Unity.Behavior, asm: Unity.Behavior}
-      data:
-        GUID:
-          m_Value0: 7891520172658379570
-          m_Value1: 17382770508162482377
-        Name: Player
-        m_Value: {fileID: 1381811558}
-    - rid: 2275768372998963309
-      type: {class: 'BlackboardVariable`1[[System.Collections.Generic.List`1[[UnityEngine.GameObject, UnityEngine.CoreModule]], mscorlib]]', ns: Unity.Behavior, asm: Unity.Behavior}
-      data:
-        GUID:
-          m_Value0: 12538452929572930933
-          m_Value1: 13806596646586389485
-        Name: Waypoints
-        m_Value:
-        - {fileID: 2093576082}
-        - {fileID: 200179670}
 --- !u!54 &1530850191
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -411996,11 +411746,11 @@ NavMeshAgent:
   m_GameObject: {fileID: 1530850186}
   m_Enabled: 1
   m_AgentTypeID: 0
-  m_Radius: 0.5
+  m_Radius: 0.3
   m_Speed: 3.5
   m_Acceleration: 8
   avoidancePriority: 50
-  m_AngularSpeed: 120
+  m_AngularSpeed: 360
   m_StoppingDistance: 1.5
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
@@ -412008,7 +411758,7 @@ NavMeshAgent:
   m_Height: 2
   m_BaseOffset: 1
   m_WalkableMask: 4294967295
-  m_ObstacleAvoidanceType: 4
+  m_ObstacleAvoidanceType: 1
 --- !u!136 &1530850193
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -429075,7 +428825,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8059344484066032934, guid: f4d19f8d67279f1428f17be73aa6222d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.99698997
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8059344484066032934, guid: f4d19f8d67279f1428f17be73aa6222d, type: 3}
       propertyPath: m_LocalPosition.z
@@ -429117,11 +428867,6 @@ PrefabInstance:
 --- !u!4 &1564732784 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8059344484066032934, guid: f4d19f8d67279f1428f17be73aa6222d, type: 3}
-  m_PrefabInstance: {fileID: 1564732783}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1564732785 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5282312538100184827, guid: f4d19f8d67279f1428f17be73aa6222d, type: 3}
   m_PrefabInstance: {fileID: 1564732783}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1566266151
@@ -438322,6 +438067,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 1809450515}
   - {fileID: 15409168}
   - {fileID: 276118533}
   - {fileID: 2044627876}
@@ -504076,7 +503822,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8059344484066032934, guid: f4d19f8d67279f1428f17be73aa6222d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.99698997
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8059344484066032934, guid: f4d19f8d67279f1428f17be73aa6222d, type: 3}
       propertyPath: m_LocalPosition.z
@@ -504118,11 +503864,6 @@ PrefabInstance:
 --- !u!4 &1717817188 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8059344484066032934, guid: f4d19f8d67279f1428f17be73aa6222d, type: 3}
-  m_PrefabInstance: {fileID: 1717817187}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1717817189 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5282312538100184827, guid: f4d19f8d67279f1428f17be73aa6222d, type: 3}
   m_PrefabInstance: {fileID: 1717817187}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1718861362
@@ -513048,8 +512789,6 @@ MonoBehaviour:
   m_Graph: {fileID: 8014858786384176814, guid: 5f669e70eac49d641aa47ec48bbdb545, type: 2}
   m_BlackboardVariableOverridesList:
   - rid: 2275768270082277466
-  - rid: 2275768372998963308
-  - rid: 2275768372998963309
   m_OriginalGraph: {fileID: 0}
   m_IsInitialised: 0
   m_IsStarted: 0
@@ -513064,24 +512803,6 @@ MonoBehaviour:
           m_Value1: 0
         Name: Self
         m_Value: {fileID: 1753243659}
-    - rid: 2275768372998963308
-      type: {class: 'BlackboardVariable`1[[UnityEngine.GameObject, UnityEngine.CoreModule]]', ns: Unity.Behavior, asm: Unity.Behavior}
-      data:
-        GUID:
-          m_Value0: 7891520172658379570
-          m_Value1: 17382770508162482377
-        Name: Player
-        m_Value: {fileID: 1381811558}
-    - rid: 2275768372998963309
-      type: {class: 'BlackboardVariable`1[[System.Collections.Generic.List`1[[UnityEngine.GameObject, UnityEngine.CoreModule]], mscorlib]]', ns: Unity.Behavior, asm: Unity.Behavior}
-      data:
-        GUID:
-          m_Value0: 12538452929572930933
-          m_Value1: 13806596646586389485
-        Name: Waypoints
-        m_Value:
-        - {fileID: 796756652}
-        - {fileID: 1717817189}
 --- !u!54 &1753243664
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -513118,11 +512839,11 @@ NavMeshAgent:
   m_GameObject: {fileID: 1753243659}
   m_Enabled: 1
   m_AgentTypeID: 0
-  m_Radius: 0.5
+  m_Radius: 0.3
   m_Speed: 3.5
   m_Acceleration: 8
   avoidancePriority: 50
-  m_AngularSpeed: 120
+  m_AngularSpeed: 360
   m_StoppingDistance: 1.5
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
@@ -513130,7 +512851,7 @@ NavMeshAgent:
   m_Height: 2
   m_BaseOffset: 1
   m_WalkableMask: 4294967295
-  m_ObstacleAvoidanceType: 4
+  m_ObstacleAvoidanceType: 1
 --- !u!136 &1753243666
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -514553,7 +514274,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1159987186348884118, guid: 32d20f49476277040b81024fea443581, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.99698997
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1159987186348884118, guid: 32d20f49476277040b81024fea443581, type: 3}
       propertyPath: m_LocalPosition.z
@@ -514595,11 +514316,6 @@ PrefabInstance:
 --- !u!4 &1782693049 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1159987186348884118, guid: 32d20f49476277040b81024fea443581, type: 3}
-  m_PrefabInstance: {fileID: 1782693048}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1782693050 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1139227819760793516, guid: 32d20f49476277040b81024fea443581, type: 3}
   m_PrefabInstance: {fileID: 1782693048}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1785506232
@@ -515513,15 +515229,15 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1809450514}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -67.81776, y: -1.83, z: -275.6776}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 15.258461, y: -0.63002, z: -116.679855}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 7307239654932441240}
   - {fileID: 1053677052}
   - {fileID: 673953737}
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1588173325}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!43 &1818918390
 Mesh:
@@ -541154,7 +540870,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1159987186348884118, guid: 32d20f49476277040b81024fea443581, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.99698997
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1159987186348884118, guid: 32d20f49476277040b81024fea443581, type: 3}
       propertyPath: m_LocalPosition.z
@@ -541196,11 +540912,6 @@ PrefabInstance:
 --- !u!4 &1853887920 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1159987186348884118, guid: 32d20f49476277040b81024fea443581, type: 3}
-  m_PrefabInstance: {fileID: 1853887919}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1853887921 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1139227819760793516, guid: 32d20f49476277040b81024fea443581, type: 3}
   m_PrefabInstance: {fileID: 1853887919}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1855257942
@@ -542954,7 +542665,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GuardVisionVisualizer
   viewDistance: 12
-  viewAngle: 90
+  viewAngle: 70
   segments: 20
   visionColor: {r: 0.5450981, g: 0, b: 0, a: 0.7529412}
 --- !u!23 &1874258570
@@ -551374,8 +551085,6 @@ MonoBehaviour:
   m_Graph: {fileID: 8014858786384176814, guid: 5f669e70eac49d641aa47ec48bbdb545, type: 2}
   m_BlackboardVariableOverridesList:
   - rid: 2275768270082277466
-  - rid: 2275768372998963308
-  - rid: 2275768372998963309
   m_OriginalGraph: {fileID: 0}
   m_IsInitialised: 0
   m_IsStarted: 0
@@ -551390,24 +551099,6 @@ MonoBehaviour:
           m_Value1: 0
         Name: Self
         m_Value: {fileID: 1903433498}
-    - rid: 2275768372998963308
-      type: {class: 'BlackboardVariable`1[[UnityEngine.GameObject, UnityEngine.CoreModule]]', ns: Unity.Behavior, asm: Unity.Behavior}
-      data:
-        GUID:
-          m_Value0: 7891520172658379570
-          m_Value1: 17382770508162482377
-        Name: Player
-        m_Value: {fileID: 1381811558}
-    - rid: 2275768372998963309
-      type: {class: 'BlackboardVariable`1[[System.Collections.Generic.List`1[[UnityEngine.GameObject, UnityEngine.CoreModule]], mscorlib]]', ns: Unity.Behavior, asm: Unity.Behavior}
-      data:
-        GUID:
-          m_Value0: 12538452929572930933
-          m_Value1: 13806596646586389485
-        Name: Waypoints
-        m_Value:
-        - {fileID: 1435187065}
-        - {fileID: 375441357}
 --- !u!54 &1903433503
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -551444,11 +551135,11 @@ NavMeshAgent:
   m_GameObject: {fileID: 1903433498}
   m_Enabled: 1
   m_AgentTypeID: 0
-  m_Radius: 0.5
+  m_Radius: 0.3
   m_Speed: 3.5
   m_Acceleration: 8
   avoidancePriority: 50
-  m_AngularSpeed: 120
+  m_AngularSpeed: 360
   m_StoppingDistance: 1.5
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
@@ -551456,7 +551147,7 @@ NavMeshAgent:
   m_Height: 2
   m_BaseOffset: 1
   m_WalkableMask: 4294967295
-  m_ObstacleAvoidanceType: 4
+  m_ObstacleAvoidanceType: 1
 --- !u!136 &1903433505
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -578125,7 +577816,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1159987186348884118, guid: 32d20f49476277040b81024fea443581, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.99698997
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1159987186348884118, guid: 32d20f49476277040b81024fea443581, type: 3}
       propertyPath: m_LocalPosition.z
@@ -578167,11 +577858,6 @@ PrefabInstance:
 --- !u!4 &2093576081 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1159987186348884118, guid: 32d20f49476277040b81024fea443581, type: 3}
-  m_PrefabInstance: {fileID: 2093576080}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &2093576082 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1139227819760793516, guid: 32d20f49476277040b81024fea443581, type: 3}
   m_PrefabInstance: {fileID: 2093576080}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &2095278421
@@ -598832,7 +598518,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8059344484066032934, guid: f4d19f8d67279f1428f17be73aa6222d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.99698997
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8059344484066032934, guid: f4d19f8d67279f1428f17be73aa6222d, type: 3}
       propertyPath: m_LocalPosition.z
@@ -599422,7 +599108,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1159987186348884118, guid: 32d20f49476277040b81024fea443581, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.99698997
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1159987186348884118, guid: 32d20f49476277040b81024fea443581, type: 3}
       propertyPath: m_LocalPosition.z
@@ -599492,7 +599178,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 03b115ff5a690004a9e525440b1dab57, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GuardVisionGizmo
-  viewDistance: 12
+  viewDistance: 14
   viewAngle: 90
 --- !u!23 &6884963192183438527
 MeshRenderer:
@@ -599622,7 +599308,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GuardVisionVisualizer
   viewDistance: 12
-  viewAngle: 90
+  viewAngle: 70
   segments: 20
   visionColor: {r: 0.5450981, g: 0, b: 0, a: 0.7529412}
 --- !u!195 &8364599276387103029
@@ -599634,11 +599320,11 @@ NavMeshAgent:
   m_GameObject: {fileID: 4671573153464055727}
   m_Enabled: 1
   m_AgentTypeID: 0
-  m_Radius: 0.5
+  m_Radius: 0.3
   m_Speed: 3.5
   m_Acceleration: 8
   avoidancePriority: 50
-  m_AngularSpeed: 120
+  m_AngularSpeed: 360
   m_StoppingDistance: 0.2
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
@@ -599646,7 +599332,7 @@ NavMeshAgent:
   m_Height: 2
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
-  m_ObstacleAvoidanceType: 4
+  m_ObstacleAvoidanceType: 1
 --- !u!1001 &8487371834984156884
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -599738,8 +599424,6 @@ MonoBehaviour:
   m_Graph: {fileID: 8014858786384176814, guid: 5f669e70eac49d641aa47ec48bbdb545, type: 2}
   m_BlackboardVariableOverridesList:
   - rid: 2275768270082277466
-  - rid: 2275768372998963308
-  - rid: 2275768372998963309
   m_OriginalGraph: {fileID: 0}
   m_IsInitialised: 0
   m_IsStarted: 0
@@ -599754,24 +599438,6 @@ MonoBehaviour:
           m_Value1: 0
         Name: Self
         m_Value: {fileID: 4671573153464055727}
-    - rid: 2275768372998963308
-      type: {class: 'BlackboardVariable`1[[UnityEngine.GameObject, UnityEngine.CoreModule]]', ns: Unity.Behavior, asm: Unity.Behavior}
-      data:
-        GUID:
-          m_Value0: 7891520172658379570
-          m_Value1: 17382770508162482377
-        Name: Player
-        m_Value: {fileID: 1381811558}
-    - rid: 2275768372998963309
-      type: {class: 'BlackboardVariable`1[[System.Collections.Generic.List`1[[UnityEngine.GameObject, UnityEngine.CoreModule]], mscorlib]]', ns: Unity.Behavior, asm: Unity.Behavior}
-      data:
-        GUID:
-          m_Value0: 12538452929572930933
-          m_Value1: 13806596646586389485
-        Name: Waypoints
-        m_Value:
-        - {fileID: 1053677051}
-        - {fileID: 673953736}
 --- !u!54 &8890635478656713983
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -599908,7 +599574,6 @@ SceneRoots:
   - {fileID: 371846643}
   - {fileID: 2125873037}
   - {fileID: 3080270735604706729}
-  - {fileID: 1809450515}
   - {fileID: 865930523}
   - {fileID: 1958120012}
   - {fileID: 1094585929}
