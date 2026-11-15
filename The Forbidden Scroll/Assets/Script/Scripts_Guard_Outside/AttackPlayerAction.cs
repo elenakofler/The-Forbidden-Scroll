@@ -10,9 +10,9 @@ public class AttackPlayerAction : Unity.Behavior.Action
     [SerializeReference] public BlackboardVariable<GameObject> AgentGameObject;
     [SerializeReference] public BlackboardVariable<GameObject> Target;
     
-    public float attackRange = 2.0f;
+    public float attackRange = 4.0f;
     public int damage = 10;
-    public float attackCooldown = 1.5f;
+    public float attackCooldown = 1f;
     
     private NavMeshAgent m_Agent;
     private float m_LastAttackTime;
@@ -49,7 +49,7 @@ public class AttackPlayerAction : Unity.Behavior.Action
         {
             m_LastAttackTime = Time.time;
             
-            if (Target.Value.TryGetComponent<SamuraiController>(out var playerHealth))
+            if (Target.Value.TryGetComponent<NinjaController>(out var playerHealth))
             {
                 playerHealth.TakeDamage(damage);
             }

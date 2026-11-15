@@ -65741,24 +65741,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f0038c16c34866b4f9e25c9c0dc0f7e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Unity.Behavior::Unity.Behavior.BehaviorGraphAgent
-  m_Graph: {fileID: 8014858786384176814, guid: 5f669e70eac49d641aa47ec48bbdb545, type: 2}
+  m_Graph: {fileID: -841810332614851076, guid: 4f9ff25d272e5614bb3e3232df183823, type: 2}
   m_BlackboardVariableOverridesList:
   - rid: 2275768270082277466
-  - rid: 1401343317018935377
-  m_OriginalGraph: {fileID: 0}
+  - rid: 1401343321825869930
+  m_OriginalGraph: {fileID: -841810332614851076, guid: 4f9ff25d272e5614bb3e3232df183823, type: 2}
   m_IsInitialised: 0
   m_IsStarted: 0
   references:
     version: 2
     RefIds:
-    - rid: 1401343317018935377
-      type: {class: 'BlackboardVariable`1[[UnityEngine.GameObject, UnityEngine.CoreModule]]', ns: Unity.Behavior, asm: Unity.Behavior}
+    - rid: 1401343321825869930
+      type: {class: 'BlackboardVariable`1[[System.Collections.Generic.List`1[[UnityEngine.GameObject, UnityEngine.CoreModule]], mscorlib]]', ns: Unity.Behavior, asm: Unity.Behavior}
       data:
         GUID:
-          m_Value0: 5680983955641628768
-          m_Value1: 8728753588065229706
-        Name: Player
-        m_Value: {fileID: 2143705048}
+          m_Value0: 1288643588429987307
+          m_Value1: 4734350768455797411
+        Name: Waypoints
+        m_Value:
+        - {fileID: 648866827}
+        - {fileID: 423842788}
     - rid: 2275768270082277466
       type: {class: 'BlackboardVariable`1[[UnityEngine.GameObject, UnityEngine.CoreModule]]', ns: Unity.Behavior, asm: Unity.Behavior}
       data:
@@ -75197,6 +75199,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 196294659}
   m_CullTransparentMesh: 1
+--- !u!1 &196537366 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5282312538100184827, guid: f4d19f8d67279f1428f17be73aa6222d, type: 3}
+  m_PrefabInstance: {fileID: 1302361946}
+  m_PrefabAsset: {fileID: 0}
 --- !u!43 &196946856
 Mesh:
   m_ObjectHideFlags: 0
@@ -77177,6 +77184,11 @@ MonoBehaviour:
   m_PointerBehavior: 0
   m_CursorLockBehavior: 0
   m_ScrollDeltaPerTick: 6
+--- !u!1 &236664895 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5282312538100184827, guid: f4d19f8d67279f1428f17be73aa6222d, type: 3}
+  m_PrefabInstance: {fileID: 28226634}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &240596073
 GameObject:
   m_ObjectHideFlags: 0
@@ -95549,6 +95561,16 @@ Mesh:
       - serializedVersion: 1
         m_IndexStart: 0
         m_IndexCount: 0
+--- !u!1 &306803677 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5282312538100184827, guid: f4d19f8d67279f1428f17be73aa6222d, type: 3}
+  m_PrefabInstance: {fileID: 976705095}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &311074767 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1139227819760793516, guid: 32d20f49476277040b81024fea443581, type: 3}
+  m_PrefabInstance: {fileID: 623584961}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &313886769
 GameObject:
   m_ObjectHideFlags: 0
@@ -144431,24 +144453,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f0038c16c34866b4f9e25c9c0dc0f7e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Unity.Behavior::Unity.Behavior.BehaviorGraphAgent
-  m_Graph: {fileID: 8014858786384176814, guid: 5f669e70eac49d641aa47ec48bbdb545, type: 2}
+  m_Graph: {fileID: -841810332614851076, guid: 4f9ff25d272e5614bb3e3232df183823, type: 2}
   m_BlackboardVariableOverridesList:
   - rid: 2275768270082277466
-  - rid: 1401343317018935376
-  m_OriginalGraph: {fileID: 0}
+  - rid: 1401343321825869928
+  m_OriginalGraph: {fileID: -841810332614851076, guid: 4f9ff25d272e5614bb3e3232df183823, type: 2}
   m_IsInitialised: 0
   m_IsStarted: 0
   references:
     version: 2
     RefIds:
-    - rid: 1401343317018935376
-      type: {class: 'BlackboardVariable`1[[UnityEngine.GameObject, UnityEngine.CoreModule]]', ns: Unity.Behavior, asm: Unity.Behavior}
+    - rid: 1401343321825869928
+      type: {class: 'BlackboardVariable`1[[System.Collections.Generic.List`1[[UnityEngine.GameObject, UnityEngine.CoreModule]], mscorlib]]', ns: Unity.Behavior, asm: Unity.Behavior}
       data:
         GUID:
-          m_Value0: 5680983955641628768
-          m_Value1: 8728753588065229706
-        Name: Player
-        m_Value: {fileID: 2143705048}
+          m_Value0: 1288643588429987307
+          m_Value1: 4734350768455797411
+        Name: Waypoints
+        m_Value:
+        - {fileID: 311074767}
+        - {fileID: 1401416960}
     - rid: 2275768270082277466
       type: {class: 'BlackboardVariable`1[[UnityEngine.GameObject, UnityEngine.CoreModule]]', ns: Unity.Behavior, asm: Unity.Behavior}
       data:
@@ -148131,6 +148155,11 @@ Mesh:
       - serializedVersion: 1
         m_IndexStart: 0
         m_IndexCount: 0
+--- !u!1 &423842788 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5282312538100184827, guid: f4d19f8d67279f1428f17be73aa6222d, type: 3}
+  m_PrefabInstance: {fileID: 1529521917}
+  m_PrefabAsset: {fileID: 0}
 --- !u!43 &424049143
 Mesh:
   m_ObjectHideFlags: 0
@@ -190674,6 +190703,11 @@ MonoBehaviour:
   m_SelectedFaces: 
   m_SelectedEdges: []
   m_SelectedVertices: 
+--- !u!1 &516913417 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 477268525398176380, guid: 5d4f4c336683f2647a18e79783aef530, type: 3}
+  m_PrefabInstance: {fileID: 1510575921}
+  m_PrefabAsset: {fileID: 0}
 --- !u!43 &517459557
 Mesh:
   m_ObjectHideFlags: 0
@@ -195322,24 +195356,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f0038c16c34866b4f9e25c9c0dc0f7e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Unity.Behavior::Unity.Behavior.BehaviorGraphAgent
-  m_Graph: {fileID: 8014858786384176814, guid: 5f669e70eac49d641aa47ec48bbdb545, type: 2}
+  m_Graph: {fileID: -841810332614851076, guid: 4f9ff25d272e5614bb3e3232df183823, type: 2}
   m_BlackboardVariableOverridesList:
   - rid: 2275768270082277466
-  - rid: 1401343317018935373
-  m_OriginalGraph: {fileID: 0}
+  - rid: 1401343321825869824
+  m_OriginalGraph: {fileID: -841810332614851076, guid: 4f9ff25d272e5614bb3e3232df183823, type: 2}
   m_IsInitialised: 0
   m_IsStarted: 0
   references:
     version: 2
     RefIds:
-    - rid: 1401343317018935373
-      type: {class: 'BlackboardVariable`1[[UnityEngine.GameObject, UnityEngine.CoreModule]]', ns: Unity.Behavior, asm: Unity.Behavior}
+    - rid: 1401343321825869824
+      type: {class: 'BlackboardVariable`1[[System.Collections.Generic.List`1[[UnityEngine.GameObject, UnityEngine.CoreModule]], mscorlib]]', ns: Unity.Behavior, asm: Unity.Behavior}
       data:
         GUID:
-          m_Value0: 5680983955641628768
-          m_Value1: 8728753588065229706
-        Name: Player
-        m_Value: {fileID: 2143705048}
+          m_Value0: 1288643588429987307
+          m_Value1: 4734350768455797411
+        Name: Waypoints
+        m_Value:
+        - {fileID: 6724268673117853767}
+        - {fileID: 2959747339416683159}
     - rid: 2275768270082277466
       type: {class: 'BlackboardVariable`1[[UnityEngine.GameObject, UnityEngine.CoreModule]]', ns: Unity.Behavior, asm: Unity.Behavior}
       data:
@@ -200486,6 +200522,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4299525254502155967, guid: ace2d4505af60b44baf71e66beb90ace, type: 3}
   m_PrefabInstance: {fileID: 647911976}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &648866827 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1139227819760793516, guid: 32d20f49476277040b81024fea443581, type: 3}
+  m_PrefabInstance: {fileID: 158747814}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &657154460
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -200624,24 +200665,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f0038c16c34866b4f9e25c9c0dc0f7e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Unity.Behavior::Unity.Behavior.BehaviorGraphAgent
-  m_Graph: {fileID: 8014858786384176814, guid: 5f669e70eac49d641aa47ec48bbdb545, type: 2}
+  m_Graph: {fileID: -841810332614851076, guid: 4f9ff25d272e5614bb3e3232df183823, type: 2}
   m_BlackboardVariableOverridesList:
   - rid: 2275768270082277466
-  - rid: 1401343317018935375
-  m_OriginalGraph: {fileID: 0}
+  - rid: 1401343321825869927
+  m_OriginalGraph: {fileID: -841810332614851076, guid: 4f9ff25d272e5614bb3e3232df183823, type: 2}
   m_IsInitialised: 0
   m_IsStarted: 0
   references:
     version: 2
     RefIds:
-    - rid: 1401343317018935375
-      type: {class: 'BlackboardVariable`1[[UnityEngine.GameObject, UnityEngine.CoreModule]]', ns: Unity.Behavior, asm: Unity.Behavior}
+    - rid: 1401343321825869927
+      type: {class: 'BlackboardVariable`1[[System.Collections.Generic.List`1[[UnityEngine.GameObject, UnityEngine.CoreModule]], mscorlib]]', ns: Unity.Behavior, asm: Unity.Behavior}
       data:
         GUID:
-          m_Value0: 5680983955641628768
-          m_Value1: 8728753588065229706
-        Name: Player
-        m_Value: {fileID: 2143705048}
+          m_Value0: 1288643588429987307
+          m_Value1: 4734350768455797411
+        Name: Waypoints
+        m_Value:
+        - {fileID: 2127199977}
+        - {fileID: 1816450901}
     - rid: 2275768270082277466
       type: {class: 'BlackboardVariable`1[[UnityEngine.GameObject, UnityEngine.CoreModule]]', ns: Unity.Behavior, asm: Unity.Behavior}
       data:
@@ -228914,6 +228957,8 @@ Transform:
   - {fileID: 330453984}
   - {fileID: 1659716840}
   - {fileID: 200815426}
+  - {fileID: 1012385234}
+  - {fileID: 1881701639}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &800397552
@@ -240398,24 +240443,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f0038c16c34866b4f9e25c9c0dc0f7e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Unity.Behavior::Unity.Behavior.BehaviorGraphAgent
-  m_Graph: {fileID: 8014858786384176814, guid: 5f669e70eac49d641aa47ec48bbdb545, type: 2}
+  m_Graph: {fileID: -841810332614851076, guid: 4f9ff25d272e5614bb3e3232df183823, type: 2}
   m_BlackboardVariableOverridesList:
   - rid: 2275768270082277466
-  - rid: 1401343317018935378
-  m_OriginalGraph: {fileID: 0}
+  - rid: 1401343321825869931
+  m_OriginalGraph: {fileID: -841810332614851076, guid: 4f9ff25d272e5614bb3e3232df183823, type: 2}
   m_IsInitialised: 0
   m_IsStarted: 0
   references:
     version: 2
     RefIds:
-    - rid: 1401343317018935378
-      type: {class: 'BlackboardVariable`1[[UnityEngine.GameObject, UnityEngine.CoreModule]]', ns: Unity.Behavior, asm: Unity.Behavior}
+    - rid: 1401343321825869931
+      type: {class: 'BlackboardVariable`1[[System.Collections.Generic.List`1[[UnityEngine.GameObject, UnityEngine.CoreModule]], mscorlib]]', ns: Unity.Behavior, asm: Unity.Behavior}
       data:
         GUID:
-          m_Value0: 5680983955641628768
-          m_Value1: 8728753588065229706
-        Name: Player
-        m_Value: {fileID: 2143705048}
+          m_Value0: 1288643588429987307
+          m_Value1: 4734350768455797411
+        Name: Waypoints
+        m_Value:
+        - {fileID: 1602213109}
+        - {fileID: 236664895}
     - rid: 2275768270082277466
       type: {class: 'BlackboardVariable`1[[UnityEngine.GameObject, UnityEngine.CoreModule]]', ns: Unity.Behavior, asm: Unity.Behavior}
       data:
@@ -248697,6 +248744,11 @@ MonoBehaviour:
   m_SelectedFaces: 
   m_SelectedEdges: []
   m_SelectedVertices: 
+--- !u!1 &854701099 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1139227819760793516, guid: 32d20f49476277040b81024fea443581, type: 3}
+  m_PrefabInstance: {fileID: 1435187063}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &859560078
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -256797,6 +256849,16 @@ MonoBehaviour:
   m_SelectedFaces: 
   m_SelectedEdges: []
   m_SelectedVertices: 
+--- !u!1 &869181080 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5282312538100184827, guid: f4d19f8d67279f1428f17be73aa6222d, type: 3}
+  m_PrefabInstance: {fileID: 375441355}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &870281487 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7367867181921685029, guid: b97a62a3415271b4fafc7580a6edb152, type: 3}
+  m_PrefabInstance: {fileID: 296999850}
+  m_PrefabAsset: {fileID: 0}
 --- !u!43 &875016498
 Mesh:
   m_ObjectHideFlags: 0
@@ -272707,24 +272769,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f0038c16c34866b4f9e25c9c0dc0f7e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Unity.Behavior::Unity.Behavior.BehaviorGraphAgent
-  m_Graph: {fileID: 8014858786384176814, guid: 5f669e70eac49d641aa47ec48bbdb545, type: 2}
+  m_Graph: {fileID: -841810332614851076, guid: 4f9ff25d272e5614bb3e3232df183823, type: 2}
   m_BlackboardVariableOverridesList:
   - rid: 2275768270082277466
-  - rid: 1401343317018935374
-  m_OriginalGraph: {fileID: 0}
+  - rid: 1401343321825869926
+  m_OriginalGraph: {fileID: -841810332614851076, guid: 4f9ff25d272e5614bb3e3232df183823, type: 2}
   m_IsInitialised: 0
   m_IsStarted: 0
   references:
     version: 2
     RefIds:
-    - rid: 1401343317018935374
-      type: {class: 'BlackboardVariable`1[[UnityEngine.GameObject, UnityEngine.CoreModule]]', ns: Unity.Behavior, asm: Unity.Behavior}
+    - rid: 1401343321825869926
+      type: {class: 'BlackboardVariable`1[[System.Collections.Generic.List`1[[UnityEngine.GameObject, UnityEngine.CoreModule]], mscorlib]]', ns: Unity.Behavior, asm: Unity.Behavior}
       data:
         GUID:
-          m_Value0: 5680983955641628768
-          m_Value1: 8728753588065229706
-        Name: Player
-        m_Value: {fileID: 2143705048}
+          m_Value0: 1288643588429987307
+          m_Value1: 4734350768455797411
+        Name: Waypoints
+        m_Value:
+        - {fileID: 1425793724}
+        - {fileID: 306803677}
     - rid: 2275768270082277466
       type: {class: 'BlackboardVariable`1[[UnityEngine.GameObject, UnityEngine.CoreModule]]', ns: Unity.Behavior, asm: Unity.Behavior}
       data:
@@ -310463,6 +310527,72 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4299525254502155967, guid: ace2d4505af60b44baf71e66beb90ace, type: 3}
   m_PrefabInstance: {fileID: 1191154324}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1012385233
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 797632800}
+    m_Modifications:
+    - target: {fileID: 2533013085583053669, guid: 31876ced58e0c3c4ab30c00165e6e2e9, type: 3}
+      propertyPath: m_Name
+      value: PlatformMedium4 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8271500921117939607, guid: 31876ced58e0c3c4ab30c00165e6e2e9, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.5722002
+      objectReference: {fileID: 0}
+    - target: {fileID: 8271500921117939607, guid: 31876ced58e0c3c4ab30c00165e6e2e9, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -94.73318
+      objectReference: {fileID: 0}
+    - target: {fileID: 8271500921117939607, guid: 31876ced58e0c3c4ab30c00165e6e2e9, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 8271500921117939607, guid: 31876ced58e0c3c4ab30c00165e6e2e9, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 140.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8271500921117939607, guid: 31876ced58e0c3c4ab30c00165e6e2e9, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 8271500921117939607, guid: 31876ced58e0c3c4ab30c00165e6e2e9, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8271500921117939607, guid: 31876ced58e0c3c4ab30c00165e6e2e9, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8271500921117939607, guid: 31876ced58e0c3c4ab30c00165e6e2e9, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 8271500921117939607, guid: 31876ced58e0c3c4ab30c00165e6e2e9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8271500921117939607, guid: 31876ced58e0c3c4ab30c00165e6e2e9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8271500921117939607, guid: 31876ced58e0c3c4ab30c00165e6e2e9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 90
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 31876ced58e0c3c4ab30c00165e6e2e9, type: 3}
+--- !u!4 &1012385234 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8271500921117939607, guid: 31876ced58e0c3c4ab30c00165e6e2e9, type: 3}
+  m_PrefabInstance: {fileID: 1012385233}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1012929540
 GameObject:
   m_ObjectHideFlags: 0
@@ -346820,24 +346950,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f0038c16c34866b4f9e25c9c0dc0f7e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Unity.Behavior::Unity.Behavior.BehaviorGraphAgent
-  m_Graph: {fileID: 8014858786384176814, guid: 5f669e70eac49d641aa47ec48bbdb545, type: 2}
+  m_Graph: {fileID: -841810332614851076, guid: 4f9ff25d272e5614bb3e3232df183823, type: 2}
   m_BlackboardVariableOverridesList:
   - rid: 2275768270082277466
-  - rid: 1401343317018935380
-  m_OriginalGraph: {fileID: 0}
+  - rid: 1401343321825869933
+  m_OriginalGraph: {fileID: -841810332614851076, guid: 4f9ff25d272e5614bb3e3232df183823, type: 2}
   m_IsInitialised: 0
   m_IsStarted: 0
   references:
     version: 2
     RefIds:
-    - rid: 1401343317018935380
-      type: {class: 'BlackboardVariable`1[[UnityEngine.GameObject, UnityEngine.CoreModule]]', ns: Unity.Behavior, asm: Unity.Behavior}
+    - rid: 1401343321825869933
+      type: {class: 'BlackboardVariable`1[[System.Collections.Generic.List`1[[UnityEngine.GameObject, UnityEngine.CoreModule]], mscorlib]]', ns: Unity.Behavior, asm: Unity.Behavior}
       data:
         GUID:
-          m_Value0: 5680983955641628768
-          m_Value1: 8728753588065229706
-        Name: Player
-        m_Value: {fileID: 2143705048}
+          m_Value0: 1288643588429987307
+          m_Value1: 4734350768455797411
+        Name: Waypoints
+        m_Value:
+        - {fileID: 1865928785}
+        - {fileID: 196537366}
     - rid: 2275768270082277466
       type: {class: 'BlackboardVariable`1[[UnityEngine.GameObject, UnityEngine.CoreModule]]', ns: Unity.Behavior, asm: Unity.Behavior}
       data:
@@ -366278,6 +366410,11 @@ MonoBehaviour:
   m_SelectedFaces: 
   m_SelectedEdges: []
   m_SelectedVertices: 
+--- !u!1 &1347963036 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1139227819760793516, guid: 32d20f49476277040b81024fea443581, type: 3}
+  m_PrefabInstance: {fileID: 2093576080}
+  m_PrefabAsset: {fileID: 0}
 --- !u!43 &1350964215
 Mesh:
   m_ObjectHideFlags: 0
@@ -386648,6 +386785,11 @@ Mesh:
       - serializedVersion: 1
         m_IndexStart: 0
         m_IndexCount: 0
+--- !u!1 &1401416960 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5282312538100184827, guid: f4d19f8d67279f1428f17be73aa6222d, type: 3}
+  m_PrefabInstance: {fileID: 1059971430}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1403664287
 GameObject:
   m_ObjectHideFlags: 0
@@ -389523,6 +389665,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 341593324}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1425793724 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1139227819760793516, guid: 32d20f49476277040b81024fea443581, type: 3}
+  m_PrefabInstance: {fileID: 1180070638}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1435187063
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -413135,24 +413282,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f0038c16c34866b4f9e25c9c0dc0f7e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Unity.Behavior::Unity.Behavior.BehaviorGraphAgent
-  m_Graph: {fileID: 8014858786384176814, guid: 5f669e70eac49d641aa47ec48bbdb545, type: 2}
+  m_Graph: {fileID: -841810332614851076, guid: 4f9ff25d272e5614bb3e3232df183823, type: 2}
   m_BlackboardVariableOverridesList:
   - rid: 2275768270082277466
-  - rid: 1401343317018935371
-  m_OriginalGraph: {fileID: 0}
+  - rid: 1401343321825869929
+  m_OriginalGraph: {fileID: -841810332614851076, guid: 4f9ff25d272e5614bb3e3232df183823, type: 2}
   m_IsInitialised: 0
   m_IsStarted: 0
   references:
     version: 2
     RefIds:
-    - rid: 1401343317018935371
-      type: {class: 'BlackboardVariable`1[[UnityEngine.GameObject, UnityEngine.CoreModule]]', ns: Unity.Behavior, asm: Unity.Behavior}
+    - rid: 1401343321825869929
+      type: {class: 'BlackboardVariable`1[[System.Collections.Generic.List`1[[UnityEngine.GameObject, UnityEngine.CoreModule]], mscorlib]]', ns: Unity.Behavior, asm: Unity.Behavior}
       data:
         GUID:
-          m_Value0: 5680983955641628768
-          m_Value1: 8728753588065229706
-        Name: Player
-        m_Value: {fileID: 2143705048}
+          m_Value0: 1288643588429987307
+          m_Value1: 4734350768455797411
+        Name: Waypoints
+        m_Value:
+        - {fileID: 1347963036}
+        - {fileID: 1906434593}
     - rid: 2275768270082277466
       type: {class: 'BlackboardVariable`1[[UnityEngine.GameObject, UnityEngine.CoreModule]]', ns: Unity.Behavior, asm: Unity.Behavior}
       data:
@@ -448974,6 +449123,11 @@ Mesh:
       - serializedVersion: 1
         m_IndexStart: 0
         m_IndexCount: 0
+--- !u!1 &1602213109 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1139227819760793516, guid: 32d20f49476277040b81024fea443581, type: 3}
+  m_PrefabInstance: {fileID: 558406135}
+  m_PrefabAsset: {fileID: 0}
 --- !u!43 &1602600441
 Mesh:
   m_ObjectHideFlags: 0
@@ -515940,6 +516094,11 @@ MonoBehaviour:
   m_SelectedFaces: 
   m_SelectedEdges: []
   m_SelectedVertices: 
+--- !u!1 &1751988848 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1139227819760793516, guid: 32d20f49476277040b81024fea443581, type: 3}
+  m_PrefabInstance: {fileID: 796756650}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1753243659
 GameObject:
   m_ObjectHideFlags: 0
@@ -516021,24 +516180,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f0038c16c34866b4f9e25c9c0dc0f7e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Unity.Behavior::Unity.Behavior.BehaviorGraphAgent
-  m_Graph: {fileID: 8014858786384176814, guid: 5f669e70eac49d641aa47ec48bbdb545, type: 2}
+  m_Graph: {fileID: -841810332614851076, guid: 4f9ff25d272e5614bb3e3232df183823, type: 2}
   m_BlackboardVariableOverridesList:
   - rid: 2275768270082277466
-  - rid: 1401343317018935381
-  m_OriginalGraph: {fileID: 0}
+  - rid: 1401343321825869934
+  m_OriginalGraph: {fileID: -841810332614851076, guid: 4f9ff25d272e5614bb3e3232df183823, type: 2}
   m_IsInitialised: 0
   m_IsStarted: 0
   references:
     version: 2
     RefIds:
-    - rid: 1401343317018935381
-      type: {class: 'BlackboardVariable`1[[UnityEngine.GameObject, UnityEngine.CoreModule]]', ns: Unity.Behavior, asm: Unity.Behavior}
+    - rid: 1401343321825869934
+      type: {class: 'BlackboardVariable`1[[System.Collections.Generic.List`1[[UnityEngine.GameObject, UnityEngine.CoreModule]], mscorlib]]', ns: Unity.Behavior, asm: Unity.Behavior}
       data:
         GUID:
-          m_Value0: 5680983955641628768
-          m_Value1: 8728753588065229706
-        Name: Player
-        m_Value: {fileID: 2143705048}
+          m_Value0: 1288643588429987307
+          m_Value1: 4734350768455797411
+        Name: Waypoints
+        m_Value:
+        - {fileID: 1751988848}
+        - {fileID: 1788270193}
     - rid: 2275768270082277466
       type: {class: 'BlackboardVariable`1[[UnityEngine.GameObject, UnityEngine.CoreModule]]', ns: Unity.Behavior, asm: Unity.Behavior}
       data:
@@ -516690,6 +516851,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 39d38a580013f894fb0ec58510a343a4, type: 3}
+--- !u!1 &1788270193 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5282312538100184827, guid: f4d19f8d67279f1428f17be73aa6222d, type: 3}
+  m_PrefabInstance: {fileID: 1717817187}
+  m_PrefabAsset: {fileID: 0}
 --- !u!43 &1799218018
 Mesh:
   m_ObjectHideFlags: 0
@@ -517372,6 +517538,11 @@ Mesh:
       - serializedVersion: 1
         m_IndexStart: 0
         m_IndexCount: 0
+--- !u!1 &1816450901 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5282312538100184827, guid: f4d19f8d67279f1428f17be73aa6222d, type: 3}
+  m_PrefabInstance: {fileID: 1564732783}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1820101839
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -543327,6 +543498,11 @@ MonoBehaviour:
   m_SelectedFaces: 
   m_SelectedEdges: []
   m_SelectedVertices: 
+--- !u!1 &1865928785 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1139227819760793516, guid: 32d20f49476277040b81024fea443581, type: 3}
+  m_PrefabInstance: {fileID: 1853887919}
+  m_PrefabAsset: {fileID: 0}
 --- !u!43 &1866835665
 Mesh:
   m_ObjectHideFlags: 0
@@ -544687,6 +544863,72 @@ Mesh:
       - serializedVersion: 1
         m_IndexStart: 0
         m_IndexCount: 0
+--- !u!1001 &1881701638
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 797632800}
+    m_Modifications:
+    - target: {fileID: 2533013085583053669, guid: 31876ced58e0c3c4ab30c00165e6e2e9, type: 3}
+      propertyPath: m_Name
+      value: PlatformMedium4 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8271500921117939607, guid: 31876ced58e0c3c4ab30c00165e6e2e9, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.5722002
+      objectReference: {fileID: 0}
+    - target: {fileID: 8271500921117939607, guid: 31876ced58e0c3c4ab30c00165e6e2e9, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -94.73318
+      objectReference: {fileID: 0}
+    - target: {fileID: 8271500921117939607, guid: 31876ced58e0c3c4ab30c00165e6e2e9, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8271500921117939607, guid: 31876ced58e0c3c4ab30c00165e6e2e9, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 138.23
+      objectReference: {fileID: 0}
+    - target: {fileID: 8271500921117939607, guid: 31876ced58e0c3c4ab30c00165e6e2e9, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 8271500921117939607, guid: 31876ced58e0c3c4ab30c00165e6e2e9, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8271500921117939607, guid: 31876ced58e0c3c4ab30c00165e6e2e9, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8271500921117939607, guid: 31876ced58e0c3c4ab30c00165e6e2e9, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 8271500921117939607, guid: 31876ced58e0c3c4ab30c00165e6e2e9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8271500921117939607, guid: 31876ced58e0c3c4ab30c00165e6e2e9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8271500921117939607, guid: 31876ced58e0c3c4ab30c00165e6e2e9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 90
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 31876ced58e0c3c4ab30c00165e6e2e9, type: 3}
+--- !u!4 &1881701639 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8271500921117939607, guid: 31876ced58e0c3c4ab30c00165e6e2e9, type: 3}
+  m_PrefabInstance: {fileID: 1881701638}
+  m_PrefabAsset: {fileID: 0}
 --- !u!43 &1886390263
 Mesh:
   m_ObjectHideFlags: 0
@@ -552808,24 +553050,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f0038c16c34866b4f9e25c9c0dc0f7e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Unity.Behavior::Unity.Behavior.BehaviorGraphAgent
-  m_Graph: {fileID: 8014858786384176814, guid: 5f669e70eac49d641aa47ec48bbdb545, type: 2}
+  m_Graph: {fileID: -841810332614851076, guid: 4f9ff25d272e5614bb3e3232df183823, type: 2}
   m_BlackboardVariableOverridesList:
   - rid: 2275768270082277466
-  - rid: 1401343317018935379
-  m_OriginalGraph: {fileID: 0}
+  - rid: 1401343321825869932
+  m_OriginalGraph: {fileID: -841810332614851076, guid: 4f9ff25d272e5614bb3e3232df183823, type: 2}
   m_IsInitialised: 0
   m_IsStarted: 0
   references:
     version: 2
     RefIds:
-    - rid: 1401343317018935379
-      type: {class: 'BlackboardVariable`1[[UnityEngine.GameObject, UnityEngine.CoreModule]]', ns: Unity.Behavior, asm: Unity.Behavior}
+    - rid: 1401343321825869932
+      type: {class: 'BlackboardVariable`1[[System.Collections.Generic.List`1[[UnityEngine.GameObject, UnityEngine.CoreModule]], mscorlib]]', ns: Unity.Behavior, asm: Unity.Behavior}
       data:
         GUID:
-          m_Value0: 5680983955641628768
-          m_Value1: 8728753588065229706
-        Name: Player
-        m_Value: {fileID: 2143705048}
+          m_Value0: 1288643588429987307
+          m_Value1: 4734350768455797411
+        Name: Waypoints
+        m_Value:
+        - {fileID: 854701099}
+        - {fileID: 869181080}
     - rid: 2275768270082277466
       type: {class: 'BlackboardVariable`1[[UnityEngine.GameObject, UnityEngine.CoreModule]]', ns: Unity.Behavior, asm: Unity.Behavior}
       data:
@@ -553497,6 +553741,11 @@ Mesh:
       - serializedVersion: 1
         m_IndexStart: 0
         m_IndexCount: 0
+--- !u!1 &1906434593 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5282312538100184827, guid: f4d19f8d67279f1428f17be73aa6222d, type: 3}
+  m_PrefabInstance: {fileID: 200179668}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1908720772
 GameObject:
   m_ObjectHideFlags: 0
@@ -590406,6 +590655,11 @@ MonoBehaviour:
   m_MinRegionArea: 2
   m_NavMeshData: {fileID: 0}
   m_BuildHeightMesh: 0
+--- !u!1 &2127199977 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1139227819760793516, guid: 32d20f49476277040b81024fea443581, type: 3}
+  m_PrefabInstance: {fileID: 1782693048}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2128506223
 GameObject:
   m_ObjectHideFlags: 0
@@ -599777,11 +600031,6 @@ MonoBehaviour:
   m_SelectedFaces: 
   m_SelectedEdges: []
   m_SelectedVertices: 
---- !u!1 &2143705048 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1662158486570866757, guid: bed77a1e1065beb4b8727e820b018da1, type: 3}
-  m_PrefabInstance: {fileID: 859560078}
-  m_PrefabAsset: {fileID: 0}
 --- !u!33 &134640898937647041
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -599990,6 +600239,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f4d19f8d67279f1428f17be73aa6222d, type: 3}
+--- !u!1 &2959747339416683159 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5282312538100184827, guid: f4d19f8d67279f1428f17be73aa6222d, type: 3}
+  m_PrefabInstance: {fileID: 2959747339416683158}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &3080270735604706729
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -600461,6 +600715,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 32d20f49476277040b81024fea443581, type: 3}
+--- !u!1 &6724268673117853767 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1139227819760793516, guid: 32d20f49476277040b81024fea443581, type: 3}
+  m_PrefabInstance: {fileID: 6724268673117853766}
+  m_PrefabAsset: {fileID: 0}
 --- !u!224 &6750397266637916844
 RectTransform:
   m_ObjectHideFlags: 0
@@ -600601,7 +600860,7 @@ Transform:
   m_GameObject: {fileID: 4671573153464055727}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 6.4377556, y: 1.77, z: -45.11548}
+  m_LocalPosition: {x: 6.44, y: 2.32, z: -45.11548}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -600738,12 +600997,23 @@ MonoBehaviour:
   m_Graph: {fileID: -841810332614851076, guid: 4f9ff25d272e5614bb3e3232df183823, type: 2}
   m_BlackboardVariableOverridesList:
   - rid: 2275768270082277466
+  - rid: 1401343321825869925
   m_OriginalGraph: {fileID: -841810332614851076, guid: 4f9ff25d272e5614bb3e3232df183823, type: 2}
   m_IsInitialised: 0
   m_IsStarted: 0
   references:
     version: 2
     RefIds:
+    - rid: 1401343321825869925
+      type: {class: 'BlackboardVariable`1[[System.Collections.Generic.List`1[[UnityEngine.GameObject, UnityEngine.CoreModule]], mscorlib]]', ns: Unity.Behavior, asm: Unity.Behavior}
+      data:
+        GUID:
+          m_Value0: 1288643588429987307
+          m_Value1: 4734350768455797411
+        Name: Waypoints
+        m_Value:
+        - {fileID: 870281487}
+        - {fileID: 516913417}
     - rid: 2275768270082277466
       type: {class: 'BlackboardVariable`1[[UnityEngine.GameObject, UnityEngine.CoreModule]]', ns: Unity.Behavior, asm: Unity.Behavior}
       data:
