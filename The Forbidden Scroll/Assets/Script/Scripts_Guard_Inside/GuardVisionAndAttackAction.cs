@@ -16,7 +16,7 @@ public class GuardVisionAndAttackAction : Unity.Behavior.Action
     private int currentWaypointIndex = 0;
 
     public float movementSpeed = 3.5f;
-    public float reachThreshold = 2.0f; // Etwas erhöht, damit der Übergang butterweich ist
+    public float reachThreshold = 2.0f;
 
     [SerializeReference]
     public BlackboardVariable<GameObject> Player;
@@ -46,7 +46,7 @@ public class GuardVisionAndAttackAction : Unity.Behavior.Action
 
         if (rb != null) rb.isKinematic = true;
 
-        // Spieler finden
+        //find Player
         GameObject playerObj = null;
         if (Player != null && Player.Value != null)
         {
@@ -66,7 +66,7 @@ public class GuardVisionAndAttackAction : Unity.Behavior.Action
 
         if (agent == null) return Status.Failure;
 
-        // Wegpunkte automatisch im Parent finden
+        //Find Waypoints automatically in the parent
         cachedWaypoints.Clear();
         if (agent.transform.parent != null)
         {
@@ -95,7 +95,7 @@ public class GuardVisionAndAttackAction : Unity.Behavior.Action
 
         bool playerInVision = false;
 
-        // 1. Sichtfeld-Prüfung zum Spieler
+        //1. Field-of-view check to the player
         if (player != null)
         {
             Vector3 directionToPlayer = player.position - agent.transform.position;
@@ -132,7 +132,7 @@ public class GuardVisionAndAttackAction : Unity.Behavior.Action
                             }
                             else
                             {
-                                // Verfolgung ohne Ruckeln
+                                //Chase
                                 if (Time.time > lastDestinationUpdateTime + 0.05f || Vector3.Distance(player.position, lastPlayerDestination) > 0.1f)
                                 {
                                     agent.SetDestination(player.position);
@@ -146,7 +146,7 @@ public class GuardVisionAndAttackAction : Unity.Behavior.Action
             }
         }
 
-        // --- ÜBERGANG: Zurück zur Patrouille ---
+        //Guard is going back to patrol after chasing the player
         if (wasPlayerInVisionLastFrame && !playerInVision)
         {
             agent.isStopped = false;
@@ -157,7 +157,7 @@ public class GuardVisionAndAttackAction : Unity.Behavior.Action
         }
         wasPlayerInVisionLastFrame = playerInVision;
 
-        // 2. Patrouillieren
+        //2. patrol
         if (!playerInVision)
         {
             if (cachedWaypoints != null && cachedWaypoints.Count > 0)
@@ -173,7 +173,7 @@ public class GuardVisionAndAttackAction : Unity.Behavior.Action
                         new Vector3(targetPoint.position.x, 0, targetPoint.position.z)
                     );
 
-                    // Wechselt zum nächsten Wegpunkt, sobald er nah genug ist
+                    //Switching to the next waypoint once it ist close enough
                     if (distanceToWaypoint <= reachThreshold || (!agent.hasPath && !agent.pathPending))
                     {
                         currentWaypointIndex = (currentWaypointIndex + 1) % cachedWaypoints.Count;

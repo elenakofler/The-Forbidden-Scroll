@@ -5,16 +5,16 @@ using Unity.Behavior;
 [System.Serializable, NodeDescription("Check Player in Vision", "Player is in vision of Self")]
 public class CheckVisionCondition : Unity.Behavior.Condition
 {
-    public float viewDistance = 12.0f; // Maximale Sichtweite
-    public float viewAngle = 90.0f;    // Sichtwinkel in Grad
+    public float viewDistance = 12.0f; //Maximum visibility range
+    public float viewAngle = 90.0f;    //Viewing angle in degrees
 
     public override bool IsTrue()
     {
-        // 1. Finde den Spieler
+        //1. Finding the Player
         GameObject playerObj = GameObject.FindGameObjectWithTag("Player");
         if (playerObj == null) return false;
 
-        // 2. Finde den Agenten (die Wache)
+        //2. Finding the Guard
         NavMeshAgent agent = Object.FindAnyObjectByType<NavMeshAgent>();
         if (agent == null) return false;
 
@@ -22,10 +22,10 @@ public class CheckVisionCondition : Unity.Behavior.Condition
         Vector3 directionToPlayer = playerObj.transform.position - guardTransform.position;
         float distance = directionToPlayer.magnitude;
 
-        // 3. Prüfen, ob der Spieler in Reichweite ist
+        //3. Checking, if the player is within range
         if (distance <= viewDistance)
         {
-            // 4. Prüfen, ob der Spieler im Sichtwinkel ist
+            //4. Checking, if the player is within the field of view
             Vector3 forwardWithoutY = new Vector3(guardTransform.forward.x, 0, guardTransform.forward.z).normalized;
             Vector3 directionWithoutY = new Vector3(directionToPlayer.x, 0, directionToPlayer.z).normalized;
 

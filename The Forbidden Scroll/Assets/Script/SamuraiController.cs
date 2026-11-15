@@ -22,11 +22,8 @@ public class SamuraiController : MonoBehaviour
     public Transform attackPoint;
     public float attackRange = 1.5f;
     public LayerMask enemyLayer;
-    public int attackDamage = 4;       // Schaden pro Schlag
+    public int attackDamage = 4;       //damage per attack
 
-    //a bool tell tells us if the Scroll has been pickt up, in this case it is fals because it hasn't been pickt up yet
-    [Header("win condition")]
-    private bool hasScroll = false;
 
     //for the ridgidbody (for physics) and for the capsulecollider (is importent for the collison box)
     private Rigidbody rb;
@@ -92,7 +89,7 @@ public class SamuraiController : MonoBehaviour
             //used for the rotation of the camera
             if (moveDir.sqrMagnitude > 0.01f)
             {
-               //Samurai dreht sich in die Laufrichtung
+               //Samurai turns to face the direction of travel
                Quaternion targetRotation = Quaternion.LookRotation(moveDir, Vector3.up);
 
                Quaternion newRotation = Quaternion.Slerp(
@@ -101,7 +98,7 @@ public class SamuraiController : MonoBehaviour
                 rotationSpeed * Time.deltaTime
                );
 
-                //Samurai bewegt sich in die Laufrichtung
+                //Samurai is moving in the direction ov travel
                 Vector3 movement = moveDir * currentSpeed * Time.deltaTime;
                 rb.MovePosition(rb.position + movement);
             }
@@ -124,18 +121,18 @@ public class SamuraiController : MonoBehaviour
     //used for the attack
     void Attack()
     {
-        // Suche alle Objekte im Umkreis der Reichweite
+        //Search for all objects within range
         Collider[] hitObjects = Physics.OverlapSphere(transform.position, attackRange);
 
         foreach (Collider col in hitObjects)
         {
-            // Prüft, ob das Objekt das "EnemyHealth"-Skript hat
+            //Checking if the object has the "EnemyHealth"-Script
             EnemyHealth guard = col.GetComponent<EnemyHealth>();
             if (guard != null && !guard.IsDead())
             {
                 guard.TakeDamage(attackDamage);
                 Debug.Log("Spieler hat die Wache getroffen!");
-                break; // Beende die Schleife nach dem ersten Treffer
+                break; //End the loop after the first hit
             }
         }
     }
@@ -159,7 +156,7 @@ public class SamuraiController : MonoBehaviour
     void GameOver()
 {
     isGameOver = true;
-    Debug.Log("GAME OVER! The Ninja died.");
+    Debug.Log("GAME OVER! The Samurai died.");
 
     // Merke dir das aktuelle Level, bevor wir zum Game Over wechseln
     PlayerPrefs.SetString("LastLevel", SceneManager.GetActiveScene().name);

@@ -1,21 +1,20 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using UnityEngine.InputSystem; // Wichtig für das neue Input System
+using UnityEngine.InputSystem; 
 
 public class MenuManager : MonoBehaviour
 {
-
     [Header("Menü Panels")]
     public GameObject startMenuPanel;
     public GameObject pauseMenuPanel;
+    public GameObject hudUI;
 
     private bool isPaused = false;
-
     private int remainingEnemies;
 
     void Start()
     {
-        // Start-Menü beim Spielstart einschalten und Zeit anhalten
+        //Enable the start menu when launching the game and pause the time
         if (startMenuPanel != null)
         {
             startMenuPanel.SetActive(true);
@@ -28,12 +27,12 @@ public class MenuManager : MonoBehaviour
         }
 
         //Count the Enemies at the start
-        remainingEnemies =GameObject.FindGameObjectsWithTag("Enemy").Length;
+        remainingEnemies = GameObject.FindGameObjectsWithTag("Enemy").Length;
     }
 
     void Update()
     {
-        // Korrekte Abfrage für das neue Input System
+        //Querying the new Input System
         if (Keyboard.current != null && Keyboard.current.escapeKey.wasPressedThisFrame)
         {
             if (startMenuPanel == null || !startMenuPanel.activeSelf)
@@ -48,7 +47,6 @@ public class MenuManager : MonoBehaviour
                 }
             }
         }
-
     }
 
     public void EnemyDefeat()
@@ -77,6 +75,7 @@ public class MenuManager : MonoBehaviour
     public void ResumeGame()
     {
         if (pauseMenuPanel != null) pauseMenuPanel.SetActive(false);
+        if (hudUI != null) hudUI.SetActive(true); //showing HUD again if game is unpaused
         Time.timeScale = 1f;
         isPaused = false;
     }
@@ -84,6 +83,7 @@ public class MenuManager : MonoBehaviour
     public void PauseGame()
     {
         if (pauseMenuPanel != null) pauseMenuPanel.SetActive(true);
+        if (hudUI != null) hudUI.SetActive(false); //Hiding HUD if game is paused
         Time.timeScale = 0f;
         isPaused = true;
     }
@@ -108,13 +108,13 @@ public class MenuManager : MonoBehaviour
 
     public void LoadVictoryScene()
     {
-        Time.timeScale = 1f; // Zeit zurücksetzen
-        SceneManager.LoadScene(4); // Lädt die Victory-Szene
+        Time.timeScale = 1f; //Reset time
+        SceneManager.LoadScene(4); //Load Victory-Scene
     }
 
     public void QuitGame()
     {
         Application.Quit();
-        Debug.Log("Spiel wird beendet...");
+        Debug.Log("Game is ending...");
     }
 }

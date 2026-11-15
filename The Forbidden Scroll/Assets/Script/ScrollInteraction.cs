@@ -6,7 +6,7 @@ public class ScrollInteraction : MonoBehaviour
 {
     public float interactionRange = 3f; //how close the player has to stand to the scroll for it to work
     private Transform playerTransform; //for calculation the distance
-    private bool playerIsClose = false; //to see if the player is in range (fixed typo here)
+    private bool playerIsClose = false; //to see if the player is in range
 
     //looks for the tag player and safes the transformation component
     void Start()
@@ -30,7 +30,7 @@ public class ScrollInteraction : MonoBehaviour
         {
             playerIsClose = true; //the player is now close enough
 
-            // we should put a UI hint like : Press F to pick up scroll
+            //putting a UI hint like : Press F to pick up scroll
             if (Keyboard.current != null && Keyboard.current.fKey.wasPressedThisFrame)
             {
                 // Calls the method in NinjaController to get the scroll

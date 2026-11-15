@@ -7,11 +7,11 @@ public class GuardVisionGizmo : MonoBehaviour
 
     private void OnDrawGizmos()
     {
-        // 1. Gelber Kreis für die maximale Sichtweite
+        //1. Red circle for showing the maximum visibility range
         Gizmos.color = Color.yellow;
         Gizmos.DrawWireSphere(transform.position + Vector3.up * 1.0f, viewDistance);
 
-        // 2. Hellblaue Linien für den genauen Sichtwinkel
+        //2. Light blue lines for the precise viewing angle
         Gizmos.color = Color.cyan;
         Vector3 forward = transform.forward;
 

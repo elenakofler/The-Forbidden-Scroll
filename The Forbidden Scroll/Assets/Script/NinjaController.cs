@@ -167,13 +167,13 @@ public class NinjaController : MonoBehaviour
         
             foreach (Collider col in hitObjects)
         {
-            // Prüft, ob das Objekt das "EnemyHealth"-Skript hat
+            //Checking if the object has the "EnemyHealth"-Script
             EnemyHealth guard = col.GetComponent<EnemyHealth>();
             if (guard != null && !guard.IsDead())
             {
                 guard.TakeDamage(attackDamage);
                 Debug.Log("Ninja is attacking");
-                break; // Beende die Schleife nach dem ersten Treffer
+                break; //End the loop after the first hit
             }
         }
         
@@ -201,11 +201,11 @@ public class NinjaController : MonoBehaviour
     isGameOver = true;
     Debug.Log("GAME OVER! The Ninja died.");
 
-    // WICHTIG: Speichert genau die Szene, in der der Ninja gerade gestorben ist
+    //Save the scene in which the Ninja died
     PlayerPrefs.SetString("LastLevel", SceneManager.GetActiveScene().name);
     PlayerPrefs.Save();
 
-    // Physikbewegung stoppen
+    //stopping physics
     rb.linearVelocity = Vector3.zero;
     rb.angularVelocity = Vector3.zero;
     SceneManager.LoadScene("GameOverScene");

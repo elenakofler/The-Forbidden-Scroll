@@ -1202,7 +1202,7 @@ GameObject:
   - component: {fileID: 26878706}
   - component: {fileID: 26878705}
   m_Layer: 0
-  m_Name: PassageDoorInnerWall (2)
+  m_Name: PassageDoorInnerWall2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -19431,7 +19431,7 @@ GameObject:
   - component: {fileID: 78189851}
   - component: {fileID: 78189850}
   m_Layer: 0
-  m_Name: PalaceInsideWallLeft (1)
+  m_Name: PalaceInsideWallLeft1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -20145,7 +20145,7 @@ GameObject:
   - component: {fileID: 82206426}
   - component: {fileID: 82206425}
   m_Layer: 0
-  m_Name: PalaceWallMainWalkWayL 2
+  m_Name: PalaceWallMainWalkWayL1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -20541,12 +20541,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 87202868}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -87.97, y: -0.05, z: -341.24}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 13.233322, y: 1.1499901, z: -178.74638}
   m_LocalScale: {x: 23.56, y: 3.9, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 2039189590}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!43 &89466383
 Mesh:
@@ -21094,7 +21094,7 @@ GameObject:
   - component: {fileID: 97879453}
   - component: {fileID: 97879452}
   m_Layer: 0
-  m_Name: Directional Light
+  m_Name: MoonShine
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -21224,7 +21224,7 @@ GameObject:
   - component: {fileID: 98653311}
   - component: {fileID: 98653310}
   m_Layer: 0
-  m_Name: PalaceInsideWallLeft (4)
+  m_Name: PalaceInsideWallRight2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -29452,7 +29452,7 @@ GameObject:
   - component: {fileID: 108684189}
   - component: {fileID: 108684188}
   m_Layer: 0
-  m_Name: PalaceInsideWallLeft(1)
+  m_Name: PalaceInsideWallRight0.1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -34234,7 +34234,7 @@ GameObject:
   - component: {fileID: 166524856}
   - component: {fileID: 166524855}
   m_Layer: 0
-  m_Name: PalaceWallMainWalkWayL 1 (1)
+  m_Name: PalaceWallMainWalkWayR2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -67723,7 +67723,7 @@ GameObject:
   - component: {fileID: 236726853}
   - component: {fileID: 236726852}
   m_Layer: 0
-  m_Name: PalaceInsideWallLeft (2)
+  m_Name: PalaceInsideWallLeft2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -76485,7 +76485,7 @@ GameObject:
   - component: {fileID: 295058843}
   - component: {fileID: 295058842}
   m_Layer: 0
-  m_Name: PalaceWallMainWalkwayL (1)
+  m_Name: PalaceWallMainWalkwayR
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -78369,7 +78369,7 @@ GameObject:
   - component: {fileID: 354353373}
   - component: {fileID: 354353372}
   m_Layer: 0
-  m_Name: PalaceInsideWallLeft (3)
+  m_Name: PalaceInsideWallRight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -80754,7 +80754,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3647291662407151570, guid: 3dc8096c0d0dffc43ac3350b4e97aebd, type: 3}
       propertyPath: m_Name
-      value: HiddingPoint 1
+      value: HiddingPoints
       objectReference: {fileID: 0}
     - target: {fileID: 8960954936352198493, guid: 3dc8096c0d0dffc43ac3350b4e97aebd, type: 3}
       propertyPath: m_LocalPosition.x
@@ -81082,7 +81082,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3647291662407151570, guid: 3dc8096c0d0dffc43ac3350b4e97aebd, type: 3}
       propertyPath: m_Name
-      value: HiddingPoint 1 (2)
+      value: HiddingPoint1
       objectReference: {fileID: 0}
     - target: {fileID: 8960954936352198493, guid: 3dc8096c0d0dffc43ac3350b4e97aebd, type: 3}
       propertyPath: m_LocalScale.x
@@ -89608,7 +89608,7 @@ GameObject:
   - component: {fileID: 428011858}
   - component: {fileID: 428011857}
   m_Layer: 0
-  m_Name: PalaceInsideWallLeft(1)
+  m_Name: PalaceInsideWallRight0.1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -134532,7 +134532,7 @@ GameObject:
   - component: {fileID: 636339633}
   - component: {fileID: 636339632}
   m_Layer: 0
-  m_Name: PalaceInsideWallLeft(1)
+  m_Name: PalaceInsideWallLeft1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -156685,16 +156685,16 @@ Transform:
   m_Children:
   - {fileID: 2102942232}
   - {fileID: 78189849}
+  - {fileID: 236726851}
+  - {fileID: 1977367986}
   - {fileID: 354353371}
   - {fileID: 98653309}
   - {fileID: 1312724994}
-  - {fileID: 1977367986}
-  - {fileID: 236726851}
   - {fileID: 1206409453}
-  - {fileID: 295058841}
   - {fileID: 82206430}
-  - {fileID: 1281238056}
   - {fileID: 1546158906}
+  - {fileID: 295058841}
+  - {fileID: 1281238056}
   - {fileID: 166524854}
   - {fileID: 1210040339}
   - {fileID: 2099844114}
@@ -289230,7 +289230,7 @@ GameObject:
   - component: {fileID: 1114403117}
   - component: {fileID: 1114403116}
   m_Layer: 0
-  m_Name: PalaceInsideWallLeft(1) (1)
+  m_Name: PalaceInsideWallLeft1.1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -316253,7 +316253,7 @@ GameObject:
   - component: {fileID: 1194526075}
   - component: {fileID: 1194526074}
   m_Layer: 0
-  m_Name: PalaceInsideWallLeft(1) (2)
+  m_Name: PalaceInsideWallRight0.3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -324695,7 +324695,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3647291662407151570, guid: 3dc8096c0d0dffc43ac3350b4e97aebd, type: 3}
       propertyPath: m_Name
-      value: HiddingPoint 1 (3)
+      value: HiddingPoint2
       objectReference: {fileID: 0}
     - target: {fileID: 8960954936352198493, guid: 3dc8096c0d0dffc43ac3350b4e97aebd, type: 3}
       propertyPath: m_LocalScale.x
@@ -326835,7 +326835,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3647291662407151570, guid: 3dc8096c0d0dffc43ac3350b4e97aebd, type: 3}
       propertyPath: m_Name
-      value: HiddingPoint 1 (1)
+      value: HiddingPoint
       objectReference: {fileID: 0}
     - target: {fileID: 8960954936352198493, guid: 3dc8096c0d0dffc43ac3350b4e97aebd, type: 3}
       propertyPath: m_LocalScale.x
@@ -334293,7 +334293,7 @@ GameObject:
   - component: {fileID: 1281238058}
   - component: {fileID: 1281238057}
   m_Layer: 0
-  m_Name: PalaceWallMainWalkWayL 2 (1)
+  m_Name: PalaceWallMainWalkWayR1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -357498,7 +357498,7 @@ GameObject:
   - component: {fileID: 1312724996}
   - component: {fileID: 1312724995}
   m_Layer: 0
-  m_Name: PalaceInsideWallLeft (5)
+  m_Name: PalaceInsideWallRight3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -358566,7 +358566,7 @@ GameObject:
   - component: {fileID: 1323373461}
   - component: {fileID: 1323373460}
   m_Layer: 0
-  m_Name: PalaceInsideWallLeft(1)
+  m_Name: PalaceInsideWallLeft0.1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -379240,7 +379240,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3647291662407151570, guid: 3dc8096c0d0dffc43ac3350b4e97aebd, type: 3}
       propertyPath: m_Name
-      value: HiddingPoint 1 (4)
+      value: HiddingPoint3
       objectReference: {fileID: 0}
     - target: {fileID: 8960954936352198493, guid: 3dc8096c0d0dffc43ac3350b4e97aebd, type: 3}
       propertyPath: m_LocalScale.x
@@ -389458,6 +389458,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3197929127485598019, guid: 9a17a514d7eb58c48a3a239bc0e4739b, type: 3}
+      propertyPath: hudUI
+      value: 
+      objectReference: {fileID: 946143495}
     - target: {fileID: 3197929127485598019, guid: 9a17a514d7eb58c48a3a239bc0e4739b, type: 3}
       propertyPath: pauseMenuPanel
       value: 
@@ -445076,7 +445080,7 @@ GameObject:
   - component: {fileID: 1546158902}
   - component: {fileID: 1546158901}
   m_Layer: 0
-  m_Name: PalaceWallMainWalkWayL 1
+  m_Name: PalaceWallMainWalkWayL2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -493419,7 +493423,7 @@ GameObject:
   - component: {fileID: 1704645142}
   - component: {fileID: 1704645141}
   m_Layer: 0
-  m_Name: PalaceInsideWallLeft
+  m_Name: PalaceInsideWallRight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -494844,7 +494848,7 @@ GameObject:
   - component: {fileID: 1733386959}
   - component: {fileID: 1733386958}
   m_Layer: 0
-  m_Name: PalaceInsideWallLeft(1) (1)
+  m_Name: PalaceInsideWallRight0.2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -498222,7 +498226,7 @@ GameObject:
   - component: {fileID: 1773216783}
   - component: {fileID: 1773216782}
   m_Layer: 0
-  m_Name: PassageDoorInnerWall (1)
+  m_Name: PassageDoorInnerWall1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -527427,7 +527431,7 @@ GameObject:
   - component: {fileID: 1977367988}
   - component: {fileID: 1977367987}
   m_Layer: 0
-  m_Name: PalaceInsideWallLeft (6)
+  m_Name: PalaceInsideWallLeft3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -528923,7 +528927,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3637163773889061224, guid: 55ea7d4ee3f845a47bf8ea92035accc6, type: 3}
       propertyPath: m_Name
-      value: Canvas
+      value: StartAndPausMenu
       objectReference: {fileID: 0}
     - target: {fileID: 5943497533032209055, guid: 55ea7d4ee3f845a47bf8ea92035accc6, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -544145,6 +544149,39 @@ MonoBehaviour:
   m_SelectedFaces: 
   m_SelectedEdges: []
   m_SelectedVertices: 
+--- !u!1 &2039189589
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2039189590}
+  m_Layer: 0
+  m_Name: Barriers
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2039189590
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2039189589}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -101.20332, y: -1.19999, z: -162.4936}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 87202871}
+  - {fileID: 2092774904}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!43 &2050446922
 Mesh:
   m_ObjectHideFlags: 0
@@ -560535,12 +560572,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2092774901}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -87.97, y: -0.05, z: -411.49}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 13.233322, y: 1.1499901, z: -248.99638}
   m_LocalScale: {x: 42.7, y: 3.9, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 2039189590}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2093871681
 GameObject:
@@ -568613,7 +568650,7 @@ GameObject:
   - component: {fileID: 2099844116}
   - component: {fileID: 2099844115}
   m_Layer: 0
-  m_Name: HouseFirstCourtyardRight (1)
+  m_Name: HouseFirstCourtyardLeft
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -585933,8 +585970,7 @@ SceneRoots:
   - {fileID: 4852123047907859367}
   - {fileID: 367682017}
   - {fileID: 2076262607}
+  - {fileID: 765000527}
   - {fileID: 1428968040}
   - {fileID: 2033329400}
-  - {fileID: 765000527}
-  - {fileID: 87202871}
-  - {fileID: 2092774904}
+  - {fileID: 2039189590}

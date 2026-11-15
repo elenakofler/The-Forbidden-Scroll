@@ -2,16 +2,16 @@ using Unity.Behavior;
 using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.UI;
-using UnityEngine.SceneManagement; // Wichtig, um den Szenennamen zu prüfen
+using UnityEngine.SceneManagement; 
 
 public class EnemyHealth : MonoBehaviour
 {
-    [Header("Gesundheit")]
+    [Header("Health")]
     public float maxHealth = 10f;
     private float currentHealth;
 
-    [Header("UI - Füll-Bild")]
-    public Image healthBarFill; // Hier ziehen wir das HealthBarFill-Objekt rein
+    [Header("UI")]
+    public Image healthBarFill; 
 
     private bool isDead = false;
     
@@ -38,7 +38,7 @@ public class EnemyHealth : MonoBehaviour
     {
         if (healthBarFill != null)
         {
-            // Berechnet den Prozentsatz von 0 bis 1 (z.B. 5 von 10 Leben = 0.5)
+            //Calculating the percentage from 0 to 1 (for example, 5 out of 10 lives = 0.5)
             healthBarFill.fillAmount = currentHealth / maxHealth;
         }
     }
@@ -47,9 +47,9 @@ public class EnemyHealth : MonoBehaviour
     void Die()
     {
         isDead = true;
-        Debug.Log("Wache wurde besiegt!");
+        Debug.Log("Guard defeated!");
 
-        // --- NUR in der SamuraiScene den MenuManager informieren ---
+        //Notify the MenuManager (only within the SamuraiScene)
         if (SceneManager.GetActiveScene().name == "SamuraiScene")
         {
             MenuManager menuManager = Object.FindAnyObjectByType<MenuManager>();
@@ -60,26 +60,22 @@ public class EnemyHealth : MonoBehaviour
         }
         else
         {
-            Debug.Log("Wache in der Ninja-Szene besiegt – kein Szenenwechsel.");
+            Debug.Log("Guard in the NinjaScene defeated! - no scene change");
         }
 
-        // 1. NavMeshAgent ausschalten, damit sie aufhört sich zu bewegen
+        //1. Disable NavMeshAgent so it stops moving
         NavMeshAgent agent = GetComponent<NavMeshAgent>();
         if (agent != null) agent.enabled = false;
 
-        // 2. Behavior Graph stoppen, damit die KI aufhört zu agieren
+        //2. Stopping the BehaviorGraph, so that the AI stopps to act
         BehaviorGraphAgent behaviorAgent = GetComponent<BehaviorGraphAgent>();
         if (behaviorAgent != null) behaviorAgent.enabled = false;
 
-        // 3. "Umfallen": Die Wache zur Seite kippen (Rotation anpassen)
+        //3. "Falling over" - tipping the guard to the side (adjust rotation) 
         transform.rotation = Quaternion.Euler(90f, transform.rotation.eulerAngles.y, transform.rotation.eulerAngles.z);
         
-        // Etwas nach unten versetzen, damit sie flach auf dem Boden liegt (abhängig vom Modell)
+        //Moving it down a bit so that it lies flat on the ground
         transform.position = new Vector3(transform.position.x, transform.position.y - 0.4f, transform.position.z);
-
-        // 4. Collider ausschalten (optional), damit man durch den Körper laufen kann
-        Collider col = GetComponent<Collider>();
-        if (col != null) col.enabled = false;
     }
 
     public bool IsDead()

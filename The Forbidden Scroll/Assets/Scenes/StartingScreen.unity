@@ -359,7 +359,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3637163773889061224, guid: 55ea7d4ee3f845a47bf8ea92035accc6, type: 3}
       propertyPath: m_Name
-      value: Canvas
+      value: StartAndPausMenu
       objectReference: {fileID: 0}
     - target: {fileID: 5044779512697644835, guid: 55ea7d4ee3f845a47bf8ea92035accc6, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
