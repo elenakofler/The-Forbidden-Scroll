@@ -1,66 +1,68 @@
 using UnityEngine;
 using UnityEngine.AI;
 using Unity.Behavior;
+using Unity.Properties;
 
-[System.Serializable, NodeDescription(name: "Attack Player", story: "Attack the player when in range")]
+[System.Serializable, GeneratePropertyBag]
+[NodeDescription(name: "Attack Player", story: "[Agent] attacks [Target]")]
 public class AttackPlayerAction : Unity.Behavior.Action
 {
-    private NavMeshAgent agent;
-    private Transform player;
-    private SamuraiController playerHealth;
-
-    public float attackRange = 2.0f; //at what distance the attack occures
-    public int damage = 10;            //Damage per hit
-    public float attackCooldown = 1.5f; //Time between attacks
-    private float lastAttackTime;
+    [SerializeReference] public BlackboardVariable<GameObject> AgentGameObject;
+    [SerializeReference] public BlackboardVariable<GameObject> Target;
+    
+    public float attackRange = 2.0f;
+    public int damage = 10;
+    public float attackCooldown = 1.5f;
+    
+    private NavMeshAgent m_Agent;
+    private float m_LastAttackTime;
 
     protected override Status OnStart()
     {
-        //Getting the NavMeshAgent directly from the guard
-        if (GameObject != null)
-        {
-            agent = GameObject.GetComponent<NavMeshAgent>();
-        }
+        if (AgentGameObject?.Value == null || Target?.Value == null)
+            return Status.Failure;
 
-        //find player with tag
-        GameObject playerObj = GameObject.FindGameObjectWithTag("Player");
-        if (playerObj != null)
-        {
-            player = playerObj.transform;
-            playerHealth = playerObj.GetComponent<SamuraiController>();
-        }
+        m_Agent = AgentGameObject.Value.GetComponent<NavMeshAgent>();
+        if (m_Agent == null) return Status.Failure;
 
-        if (agent == null || player == null) return Status.Failure;
         return Status.Running;
     }
 
     protected override Status OnUpdate()
     {
-        if (player == null || agent == null) return Status.Failure;
+        if (Target.Value == null || m_Agent == null) 
+            return Status.Failure;
 
-        float distance = Vector3.Distance(agent.transform.position, player.position);
+        float distance = Vector3.Distance(m_Agent.transform.position, Target.Value.transform.position);
 
-        if (distance <= attackRange)
+        // If out of range, fail so the tree can switch back to a chase/navigate behavior
+        if (distance > attackRange)
         {
-            //Guard stops when attacking
-            agent.SetDestination(agent.transform.position);
-
-            //Checking, if the cooldown is over
-            if (Time.time >= lastAttackTime + attackCooldown)
-            {
-                lastAttackTime = Time.time;
-                if (playerHealth != null)
-                {
-                    playerHealth.TakeDamage(damage);
-                }
-            }
+            m_Agent.isStopped = false;
+            return Status.Failure; 
         }
-        else
+
+        // In range: Stop and attack
+        m_Agent.isStopped = true;
+
+        if (Time.time >= m_LastAttackTime + attackCooldown)
         {
-            //Otherwise, keep chasing
-            agent.SetDestination(player.position);
+            m_LastAttackTime = Time.time;
+            
+            if (Target.Value.TryGetComponent<SamuraiController>(out var playerHealth))
+            {
+                playerHealth.TakeDamage(damage);
+            }
         }
 
         return Status.Running;
+    }
+
+    protected override void OnEnd()
+    {
+        if (m_Agent != null)
+        {
+            m_Agent.isStopped = false;
+        }
     }
 }

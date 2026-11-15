@@ -600735,24 +600735,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f0038c16c34866b4f9e25c9c0dc0f7e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Unity.Behavior::Unity.Behavior.BehaviorGraphAgent
-  m_Graph: {fileID: 8014858786384176814, guid: 5f669e70eac49d641aa47ec48bbdb545, type: 2}
+  m_Graph: {fileID: -841810332614851076, guid: 4f9ff25d272e5614bb3e3232df183823, type: 2}
   m_BlackboardVariableOverridesList:
   - rid: 2275768270082277466
-  - rid: 1401343317018935372
-  m_OriginalGraph: {fileID: 0}
+  m_OriginalGraph: {fileID: -841810332614851076, guid: 4f9ff25d272e5614bb3e3232df183823, type: 2}
   m_IsInitialised: 0
   m_IsStarted: 0
   references:
     version: 2
     RefIds:
-    - rid: 1401343317018935372
-      type: {class: 'BlackboardVariable`1[[UnityEngine.GameObject, UnityEngine.CoreModule]]', ns: Unity.Behavior, asm: Unity.Behavior}
-      data:
-        GUID:
-          m_Value0: 5680983955641628768
-          m_Value1: 8728753588065229706
-        Name: Player
-        m_Value: {fileID: 2143705048}
     - rid: 2275768270082277466
       type: {class: 'BlackboardVariable`1[[UnityEngine.GameObject, UnityEngine.CoreModule]]', ns: Unity.Behavior, asm: Unity.Behavior}
       data:
