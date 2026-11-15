@@ -35,11 +35,16 @@ public class AttackPlayerAction : Unity.Behavior.Action
 
         float distance = Vector3.Distance(m_Agent.transform.position, Target.Value.transform.position);
 
-        // If out of range, fail so the tree can switch back to a chase/navigate behavior
+        // If out of range, chase the player!
         if (distance > attackRange)
         {
             m_Agent.isStopped = false;
-            return Status.Failure; 
+            
+            // Tell the agent to walk to the player's current position
+            m_Agent.SetDestination(Target.Value.transform.position);
+            
+            // Return Running so the node stays active while chasing
+            return Status.Running; 
         }
 
         // In range: Stop and attack
