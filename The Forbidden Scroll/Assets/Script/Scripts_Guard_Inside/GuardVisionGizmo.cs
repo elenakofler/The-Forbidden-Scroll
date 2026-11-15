@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class GuardVisionGizmo : MonoBehaviour
 {
-    public float viewDistance = 12.0f;
+    public float viewDistance = 14.0f;
     public float viewAngle = 90.0f;
 
     private void OnDrawGizmos()

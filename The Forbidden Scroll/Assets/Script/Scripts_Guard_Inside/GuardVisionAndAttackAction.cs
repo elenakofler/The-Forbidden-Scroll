@@ -33,61 +33,63 @@ public class GuardVisionAndAttackAction : Unity.Behavior.Action
     private bool wasPlayerInVisionLastFrame = false;
 
     protected override Status OnStart()
+{
+    // Wichtig: Nutze exakt das GameObject, an dem dieser Graph gerade läuft
+    if (GameObject != null)
     {
-        if (GameObject != null)
-        {
-            agent = GameObject.GetComponent<NavMeshAgent>();
-            rb = GameObject.GetComponent<Rigidbody>();
-        }
-        if (agent == null)
-        {
-            agent = Object.FindAnyObjectByType<NavMeshAgent>();
-        }
-
-        if (rb != null) rb.isKinematic = true;
-
-        //find Player
-        GameObject playerObj = null;
-        if (Player != null && Player.Value != null)
-        {
-            playerObj = Player.Value;
-        }
-        else
-        {
-            playerObj = GameObject.FindGameObjectWithTag("Player");
-            if (playerObj == null) playerObj = GameObject.Find("Ninja");
-        }
-
-        if (playerObj != null)
-        {
-            player = playerObj.transform;
-            playerHealth = playerObj.GetComponent<NinjaController>();
-        }
-
-        if (agent == null) return Status.Failure;
-
-        //Find Waypoints automatically in the parent
-        cachedWaypoints.Clear();
-        if (agent.transform.parent != null)
-        {
-            cachedWaypoints = agent.transform.parent
-                .Cast<Transform>()
-                .Where(t => t.name.StartsWith("Point"))
-                .OrderBy(t => t.name)
-                .ToList();
-        }
-
-        agent.speed = movementSpeed;
-        agent.isStopped = false;
-        
-        if (cachedWaypoints.Count > 0 && cachedWaypoints[0] != null)
-        {
-            agent.SetDestination(cachedWaypoints[currentWaypointIndex].position);
-        }
-
-        wasPlayerInVisionLastFrame = false;
-        return Status.Running;
+        agent = GameObject.GetComponent<NavMeshAgent>();
+        rb = GameObject.GetComponent<Rigidbody>();
     }
+
+    // Wenn kein Agent da ist, schlägt dieser Guard fehl – wir suchen NICHT mehr global mit FindAnyObjectByType!
+    if (agent == null)
+    {
+        Debug.LogError("GuardVisionAndAttackAction: Kein NavMeshAgent auf dem aktuellen Guard gefunden!", GameObject);
+        return Status.Failure;
+    }
+
+    if (rb != null) rb.isKinematic = true;
+
+    // Rest des Codes bleibt gleich...
+    GameObject playerObj = null;
+    if (Player != null && Player.Value != null)
+    {
+        playerObj = Player.Value;
+    }
+    else
+    {
+        playerObj = GameObject.FindGameObjectWithTag("Player");
+        if (playerObj == null) playerObj = GameObject.Find("Ninja");
+    }
+
+    if (playerObj != null)
+    {
+        player = playerObj.transform;
+        playerHealth = playerObj.GetComponent<NinjaController>();
+    }
+
+    //Find Waypoints automatically in the parent
+    cachedWaypoints.Clear();
+    if (agent.transform.parent != null)
+    {
+        cachedWaypoints = agent.transform.parent
+            .Cast<Transform>()
+            .Where(t => t.name.StartsWith("Point"))
+            .OrderBy(t => t.name)
+            .ToList();
+    }
+
+    agent.speed = movementSpeed;
+    agent.isStopped = false;
+    
+    if (cachedWaypoints.Count > 0 && cachedWaypoints[0] != null)
+    {
+        agent.SetDestination(cachedWaypoints[currentWaypointIndex].position);
+    }
+
+    wasPlayerInVisionLastFrame = false;
+    return Status.Running;
+}
 
     protected override Status OnUpdate()
     {
@@ -109,7 +111,7 @@ public class GuardVisionAndAttackAction : Unity.Behavior.Action
 
                 if (angle <= viewAngle / 2f)
                 {
-                    Vector3 rayStart = agent.transform.position + Vector3.up * 1.0f;
+                    Vector3 rayStart = agent.transform.position + Vector3.up * 1.0f + agent.transform.forward * 0.5f;
                     RaycastHit hit;
 
                     if (Physics.Raycast(rayStart, directionToPlayer.normalized, out hit, viewDistance))
