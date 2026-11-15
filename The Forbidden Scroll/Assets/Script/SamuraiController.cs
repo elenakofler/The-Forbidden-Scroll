@@ -140,17 +140,18 @@ public class SamuraiController : MonoBehaviour
     //the damage calculation for the damage that the player takes, 
     //and if the HP sink to 0 its GameOver
     public void TakeDamage(int damage)
-    {
-        if (currentHp <= 0) return;
-        currentHp = Mathf.Max(0, currentHp - damage);
-        healthBarFill.fillAmount = (float)currentHp / maxHp;
-        Debug.Log("Samurai took damage: Current HP: " + currentHp);
+{
+    if (currentHp <= 0) return;
+    
+    currentHp = Mathf.Max(0, currentHp - damage);
+    healthBarFill.fillAmount = (float)currentHp / maxHp;
+    Debug.Log("Samurai took damage: Current HP: " + currentHp);
 
-        if (currentHp == 0)
-        {
-            GameOver();
-        }
+    if (currentHp == 0)
+    {
+        GameOver();
     }
+}
 
     //for the Game over scene that is suppost to be played
     void GameOver()

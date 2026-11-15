@@ -54,7 +54,7 @@ public class AttackPlayerAction : Unity.Behavior.Action
         {
             m_LastAttackTime = Time.time;
             
-            if (Target.Value.TryGetComponent<NinjaController>(out var playerHealth))
+            if (Target.Value.TryGetComponent<SamuraiController>(out var playerHealth))
             {
                 playerHealth.TakeDamage(damage);
             }
