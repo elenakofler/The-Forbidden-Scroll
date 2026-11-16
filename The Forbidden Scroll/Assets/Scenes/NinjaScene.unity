@@ -46893,7 +46893,7 @@ GameObject:
   - component: {fileID: 122075912}
   - component: {fileID: 122075914}
   - component: {fileID: 122075913}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: HealthBarBackground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -47002,7 +47002,7 @@ GameObject:
   - component: {fileID: 125181625}
   - component: {fileID: 125181627}
   - component: {fileID: 125181626}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: HealthLabel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -57977,7 +57977,7 @@ GameObject:
   - component: {fileID: 161118382}
   - component: {fileID: 161118384}
   - component: {fileID: 161118383}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: HealthLabel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -65677,9 +65677,9 @@ GameObject:
   - component: {fileID: 165401283}
   - component: {fileID: 165401282}
   - component: {fileID: 165401281}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Guard_inside
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -65914,7 +65914,7 @@ GameObject:
   - component: {fileID: 175457683}
   - component: {fileID: 175457685}
   - component: {fileID: 175457684}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: HealthBarFill
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -65990,7 +65990,7 @@ GameObject:
   - component: {fileID: 175640170}
   - component: {fileID: 175640169}
   - component: {fileID: 175640168}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: HealthCanvas_guard
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -77201,7 +77201,7 @@ GameObject:
   - component: {fileID: 240596077}
   - component: {fileID: 240596076}
   - component: {fileID: 240596075}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: HealthCanvas_guard
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -144032,7 +144032,7 @@ GameObject:
   - component: {fileID: 374224713}
   - component: {fileID: 374224715}
   - component: {fileID: 374224714}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: HealthLabel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -144231,7 +144231,7 @@ GameObject:
   - component: {fileID: 377441520}
   - component: {fileID: 377441522}
   - component: {fileID: 377441521}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: HealthBarBackground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -144389,9 +144389,9 @@ GameObject:
   - component: {fileID: 379436667}
   - component: {fileID: 379436666}
   - component: {fileID: 379436665}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Guard_inside
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -144699,7 +144699,7 @@ GameObject:
   - component: {fileID: 384484818}
   - component: {fileID: 384484820}
   - component: {fileID: 384484819}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: HealthLabel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -146680,7 +146680,7 @@ GameObject:
   - component: {fileID: 406544741}
   - component: {fileID: 406544740}
   - component: {fileID: 406544739}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: HealthCanvas_guard
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -146788,7 +146788,7 @@ GameObject:
   - component: {fileID: 409734226}
   - component: {fileID: 409734228}
   - component: {fileID: 409734227}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: HealthBarFill
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -175198,7 +175198,7 @@ GameObject:
   - component: {fileID: 491021942}
   - component: {fileID: 491021941}
   - component: {fileID: 491021940}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: VisionConeVisual
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -176079,7 +176079,7 @@ GameObject:
   - component: {fileID: 512353235}
   - component: {fileID: 512353234}
   - component: {fileID: 512353233}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: VisionConeVisual
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -195292,9 +195292,9 @@ GameObject:
   - component: {fileID: 585053274}
   - component: {fileID: 585053273}
   - component: {fileID: 585053272}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Guard_inside1
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -199594,7 +199594,7 @@ GameObject:
   - component: {fileID: 637044471}
   - component: {fileID: 637044470}
   - component: {fileID: 637044469}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: HealthCanvas_guard
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -200601,9 +200601,9 @@ GameObject:
   - component: {fileID: 658597262}
   - component: {fileID: 658597261}
   - component: {fileID: 658597260}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Guard_inside
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -226126,7 +226126,7 @@ GameObject:
   - component: {fileID: 760466829}
   - component: {fileID: 760466828}
   - component: {fileID: 760466827}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: VisionConeVisual
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -227183,7 +227183,7 @@ GameObject:
   - component: {fileID: 769077755}
   - component: {fileID: 769077757}
   - component: {fileID: 769077756}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: HealthLabel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -227444,7 +227444,7 @@ GameObject:
   - component: {fileID: 776242017}
   - component: {fileID: 776242019}
   - component: {fileID: 776242018}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: HealthLabel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -229034,7 +229034,7 @@ GameObject:
   - component: {fileID: 802003253}
   - component: {fileID: 802003255}
   - component: {fileID: 802003254}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: HealthBarFill
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -240379,9 +240379,9 @@ GameObject:
   - component: {fileID: 830095335}
   - component: {fileID: 830095334}
   - component: {fileID: 830095333}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Guard_inside
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -248769,6 +248769,10 @@ PrefabInstance:
       propertyPath: healthBarFill
       value: 
       objectReference: {fileID: 196294661}
+    - target: {fileID: 1858431926275834857, guid: bed77a1e1065beb4b8727e820b018da1, type: 3}
+      propertyPath: enemyLayer.m_Bits
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 3197649005453054354, guid: bed77a1e1065beb4b8727e820b018da1, type: 3}
       propertyPath: m_UseGravity
       value: 1
@@ -272705,9 +272709,9 @@ GameObject:
   - component: {fileID: 890696418}
   - component: {fileID: 890696417}
   - component: {fileID: 890696416}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Guard_inside
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -298181,7 +298185,7 @@ GameObject:
   - component: {fileID: 958861462}
   - component: {fileID: 958861461}
   - component: {fileID: 958861460}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: HealthCanvas_guard
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -313812,7 +313816,7 @@ GameObject:
   - component: {fileID: 1035342110}
   - component: {fileID: 1035342109}
   - component: {fileID: 1035342108}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: VisionConeVisual
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -318361,7 +318365,7 @@ GameObject:
   - component: {fileID: 1074730275}
   - component: {fileID: 1074730274}
   - component: {fileID: 1074730273}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: VisionConeVisual
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -329035,7 +329039,7 @@ GameObject:
   - component: {fileID: 1128852416}
   - component: {fileID: 1128852418}
   - component: {fileID: 1128852417}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: HealthBarFill
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -329645,7 +329649,7 @@ GameObject:
   - component: {fileID: 1138229993}
   - component: {fileID: 1138229992}
   - component: {fileID: 1138229991}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: VisionConeVisual
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -330819,7 +330823,7 @@ GameObject:
   - component: {fileID: 1150829965}
   - component: {fileID: 1150829967}
   - component: {fileID: 1150829966}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: HealthBarFill
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -346886,9 +346890,9 @@ GameObject:
   - component: {fileID: 1272182560}
   - component: {fileID: 1272182559}
   - component: {fileID: 1272182558}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Guard_inside
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -386481,7 +386485,7 @@ GameObject:
   - component: {fileID: 1400489957}
   - component: {fileID: 1400489959}
   - component: {fileID: 1400489958}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: HealthLabel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -413218,9 +413222,9 @@ GameObject:
   - component: {fileID: 1530850190}
   - component: {fileID: 1530850189}
   - component: {fileID: 1530850188}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Guard_inside
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -430376,7 +430380,7 @@ GameObject:
   - component: {fileID: 1561200797}
   - component: {fileID: 1561200796}
   - component: {fileID: 1561200795}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: VisionConeVisual
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -489065,7 +489069,7 @@ GameObject:
   - component: {fileID: 1663144650}
   - component: {fileID: 1663144649}
   - component: {fileID: 1663144648}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: HealthCanvas_guard
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -489346,7 +489350,7 @@ GameObject:
   - component: {fileID: 1669275550}
   - component: {fileID: 1669275552}
   - component: {fileID: 1669275551}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: HealthBarFill
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -489777,7 +489781,7 @@ GameObject:
   - component: {fileID: 1673871106}
   - component: {fileID: 1673871108}
   - component: {fileID: 1673871107}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: HealthBarFill
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -490742,7 +490746,7 @@ GameObject:
   - component: {fileID: 1677392092}
   - component: {fileID: 1677392094}
   - component: {fileID: 1677392093}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: HealthBarBackground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -506949,7 +506953,7 @@ GameObject:
   - component: {fileID: 1708264566}
   - component: {fileID: 1708264568}
   - component: {fileID: 1708264567}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: HealthBarBackground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -516116,9 +516120,9 @@ GameObject:
   - component: {fileID: 1753243663}
   - component: {fileID: 1753243662}
   - component: {fileID: 1753243661}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Guard_inside
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -516526,7 +516530,7 @@ GameObject:
   - component: {fileID: 1768861496}
   - component: {fileID: 1768861498}
   - component: {fileID: 1768861497}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: HealthLabel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -516663,7 +516667,7 @@ GameObject:
   - component: {fileID: 1769985863}
   - component: {fileID: 1769985865}
   - component: {fileID: 1769985864}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: HealthBarBackground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -542518,7 +542522,7 @@ GameObject:
   - component: {fileID: 1855257946}
   - component: {fileID: 1855257945}
   - component: {fileID: 1855257944}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: HealthCanvas_guard
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -544227,7 +544231,7 @@ GameObject:
   - component: {fileID: 1874258571}
   - component: {fileID: 1874258570}
   - component: {fileID: 1874258569}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: VisionConeVisual
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -552986,9 +552990,9 @@ GameObject:
   - component: {fileID: 1903433502}
   - component: {fileID: 1903433501}
   - component: {fileID: 1903433500}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Guard_inside
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -563474,7 +563478,7 @@ GameObject:
   - component: {fileID: 1957597308}
   - component: {fileID: 1957597307}
   - component: {fileID: 1957597306}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: HealthCanvas_guard
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -564729,7 +564733,7 @@ GameObject:
   - component: {fileID: 1973212051}
   - component: {fileID: 1973212053}
   - component: {fileID: 1973212052}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: HealthBarFill
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -566274,7 +566278,7 @@ GameObject:
   - component: {fileID: 1996439451}
   - component: {fileID: 1996439453}
   - component: {fileID: 1996439452}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: HealthBarBackground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -580555,7 +580559,7 @@ GameObject:
   - component: {fileID: 2095278422}
   - component: {fileID: 2095278424}
   - component: {fileID: 2095278423}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: HealthBarBackground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -582527,7 +582531,7 @@ GameObject:
   - component: {fileID: 2105635411}
   - component: {fileID: 2105635413}
   - component: {fileID: 2105635412}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: HealthBarBackground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -600050,7 +600054,7 @@ GameObject:
   - component: {fileID: 3563258477043284458}
   - component: {fileID: 9159535062961788259}
   - component: {fileID: 4088672087623590840}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: HealthLabel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -600114,7 +600118,7 @@ GameObject:
   - component: {fileID: 6750397266637916844}
   - component: {fileID: 1114523392213904134}
   - component: {fileID: 4396257778258429499}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: HealthBarFill
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -600132,7 +600136,7 @@ GameObject:
   - component: {fileID: 2194742499450838796}
   - component: {fileID: 3271005156369464633}
   - component: {fileID: 1178289317866897705}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: HealthBarBackground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -600345,7 +600349,7 @@ GameObject:
   - component: {fileID: 985286763156370143}
   - component: {fileID: 7284912371069666206}
   - component: {fileID: 7507309601520121067}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: VisionConeVisual
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -600554,9 +600558,9 @@ GameObject:
   - component: {fileID: 8627774501968979036}
   - component: {fileID: 8890635478656713984}
   - component: {fileID: 6821408580136080590}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Guard_inside0
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -600651,7 +600655,7 @@ GameObject:
   - component: {fileID: 3341783885979085135}
   - component: {fileID: 2180480469400530797}
   - component: {fileID: 5810214405720329608}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: HealthCanvas_guard
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -5,8 +5,8 @@ using UnityEngine.UI;
 
 public class NinjaController : MonoBehaviour
 {
-    //variables for movement and for stealth
-    [Header("movement")]
+    // Variables for movement and stealth
+    [Header("Movement")]
     public float normalSpeed = 5f;
     public float crouchSpeed = 2.2f;
     public float jumpForce = 5f;
@@ -14,8 +14,8 @@ public class NinjaController : MonoBehaviour
     public float rotationSpeed = 15f;
     private bool isGrounded = true;
 
-    //variables for attack and health
-    [Header("attack and health")]
+    // Variables for attack and health
+    [Header("Attack and Health")]
     public int maxHp = 100;
     private int currentHp;
     public Transform attackPoint;
@@ -26,97 +26,84 @@ public class NinjaController : MonoBehaviour
 
     private bool isGameOver = false;
 
-
-    //a bool tell tells us if the Scroll has been pickt up, in this case it is fals because it hasn't been pickt up yet
-    [Header("win condition")]
+    // Win condition variable
+    [Header("Win Condition")]
     private bool hasScroll = false;
 
-    //for the ridgidbody (for physics) and for the capsulecollider (is importent for the collison box)
+    // Components for physics and collision
     private Rigidbody rb;
     private CapsuleCollider capsuleCollider;
 
-
-    //initializes the komponents and the basics needed for the game
     void Start()
     {
-        //gets components for Rigidbody and CapsuleCollider
         rb = GetComponent<Rigidbody>();
         capsuleCollider = GetComponent<CapsuleCollider>();
-        //sets the current HP at the start as the max HP
         currentHp = maxHp; 
 
-        // keeps the player from falling over
+        // Keeps the player from falling over
         rb.freezeRotation = true; 
     }
 
     void Update()
     {
-        if (Keyboard.current == null) return;
+        if (Keyboard.current == null || isGameOver) return;
 
-        // used for the vectors that we use to move
         float moveX = 0f;
         float moveZ = 0f;
-        //checks if the Keys W,A,S,D or alternetavly the Arrowkeys are pressed for moving)
+
         if (Keyboard.current.aKey.isPressed || Keyboard.current.leftArrowKey.isPressed) moveX = -1f;
         if (Keyboard.current.dKey.isPressed || Keyboard.current.rightArrowKey.isPressed) moveX = 1f;
         if (Keyboard.current.sKey.isPressed || Keyboard.current.downArrowKey.isPressed) moveZ = -1f;
         if (Keyboard.current.wKey.isPressed || Keyboard.current.upArrowKey.isPressed) moveZ = 1f;
 
-        //Crouching when the player presses the shift key
+        // Crouching when the player presses the shift key
         if (Keyboard.current.leftShiftKey.wasPressedThisFrame)
         {
             ToggleCrouch();
         }
 
-        //Slows down the player when the player is crouched
         float currentSpeed = isCrouching ? crouchSpeed : normalSpeed;
 
-
-        //this is for the movement relative to the camera, used to make the player move into the direction that they are looking
-       if (Camera.main != null)
+        // Movement relative to the camera direction
+        if (Camera.main != null)
         {
             Transform camTransform = Camera.main.transform;
 
             Vector3 camForward = camTransform.forward;
             Vector3 camRight = camTransform.right;
 
-            camForward.y = 0f; //so the player doesn't go into the sky
+            camForward.y = 0f; // Keep player level
             camRight.y = 0f;
 
             camForward.Normalize();
             camRight.Normalize();
+
             Vector3 moveDir = (camForward * moveZ + camRight * moveX).normalized;
 
-            //used for the rotation of the camera
             if (moveDir.sqrMagnitude > 0.01f)
             {
-               
                 Quaternion targetRotation = Quaternion.LookRotation(moveDir, Vector3.up);
                 transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, rotationSpeed * Time.deltaTime);
 
-                
                 Vector3 movement = moveDir * currentSpeed * Time.deltaTime;
                 rb.MovePosition(rb.position + movement);
             }
         }
 
-        //you can only jump when you are not crouched and when you are on the ground
+        // Jumping
         if (Keyboard.current.spaceKey.wasPressedThisFrame && !isCrouching && isGrounded)
         {
             rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
-            isGrounded = false; //after jumping it is automatically set to false so the player cant jump again once they are in the air
+            isGrounded = false;
         }
 
-
-        // attack with the left mouse button
+        // Attacking with the left mouse button
         if (Mouse.current != null && Mouse.current.leftButton.wasPressedThisFrame)
         {
             Attack();
         }
     }
 
-
-    //changes the hight of the character --> important for the hidding mechnic so the player fits behind/ underneath smaller hurdles
     void ToggleCrouch()
     {
         isCrouching = !isCrouching;
@@ -127,23 +114,19 @@ public class NinjaController : MonoBehaviour
             {
                 capsuleCollider.height = 1.0f;
                 capsuleCollider.center = new Vector3(0, -0.5f, 0);
-                Debug.Log("Ninja is crouching (slowed down)");
             }
             else
             {
                 capsuleCollider.height = 2.0f;
                 capsuleCollider.center = new Vector3(0, 0, 0);
-                Debug.Log("Ninja is standing up.");
             }
         }
     }
 
-    //for checking if the player is standing on the floor
     void OnCollisionStay(Collision collision)
     {
         foreach (ContactPoint contact in collision.contacts)
         {
-            //checks if the player is standing on the ground, stopps the player from jumping up the walls 
             if (contact.normal.y > 0.5f)
             {
                 isGrounded = true;
@@ -152,40 +135,40 @@ public class NinjaController : MonoBehaviour
         }
     }
 
-    //once the player is in the air the bool is set to false
     void OnCollisionExit(Collision collision)
     {
         isGrounded = false;
     }
 
-    //used for the attack
     void Attack()
     {
-        Collider[] hitObjects = Physics.OverlapSphere(transform.position, attackRange);
+        // Use attackPoint position if assigned, otherwise use transform.position
+        Vector3 origin = attackPoint != null ? attackPoint.position : transform.position;
+        Collider[] hitObjects = Physics.OverlapSphere(origin, attackRange, enemyLayer);
 
-        
-        
-            foreach (Collider col in hitObjects)
+        foreach (Collider col in hitObjects)
         {
-            //Checking if the object has the "EnemyHealth"-Script
             EnemyHealth guard = col.GetComponent<EnemyHealth>();
             if (guard != null && !guard.IsDead())
             {
                 guard.TakeDamage(attackDamage);
                 Debug.Log("Ninja is attacking");
-                break; //End the loop after the first hit
+                break; 
             }
         }
-        
     }
 
-    //the damage calculation for the damage that the player takes, 
-    //and if the HP sink to 0 its GameOver
     public void TakeDamage(int damage)
     {
         if (currentHp <= 0) return;
+
         currentHp = Mathf.Max(0, currentHp - damage);
-        healthBarFill.fillAmount = (float)currentHp / maxHp;
+        
+        if (healthBarFill != null)
+        {
+            healthBarFill.fillAmount = (float)currentHp / maxHp;
+        }
+
         Debug.Log("Ninja took damage: Current HP: " + currentHp);
 
         if (currentHp == 0)
@@ -193,32 +176,28 @@ public class NinjaController : MonoBehaviour
             GameOver();
         }
     }
-   
 
-    //for the Game over scene that is suppost to be played
     void GameOver()
     {
-    isGameOver = true;
-    Debug.Log("GAME OVER! The Ninja died.");
+        isGameOver = true;
+        Debug.Log("GAME OVER! The Ninja died.");
 
-    //Save the scene in which the Ninja died
-    PlayerPrefs.SetString("LastLevel", SceneManager.GetActiveScene().name);
-    PlayerPrefs.Save();
+        PlayerPrefs.SetString("LastLevel", SceneManager.GetActiveScene().name);
+        PlayerPrefs.Save();
 
-    //stopping physics
-    rb.linearVelocity = Vector3.zero;
-    rb.angularVelocity = Vector3.zero;
-    SceneManager.LoadScene("GameOverScene");
+        rb.linearVelocity = Vector3.zero;
+        rb.angularVelocity = Vector3.zero;
+        SceneManager.LoadScene("GameOverScene");
     }
 
-    //to collect the scroll 
     public void CollectScroll()
     {
         hasScroll = true;
-        Debug.Log("VICTORY! The scroll has been recoverd!");
+        Debug.Log("VICTORY! The scroll has been recovered! HasScroll status: " + hasScroll);
+        
+        // Example win condition logic: SceneManager.LoadScene("WinScene");
     }
 
-    //shows the attack range of the enemie so it is easier to use in the editor mode
     private void OnDrawGizmosSelected()
     {
         if (attackPoint != null)
